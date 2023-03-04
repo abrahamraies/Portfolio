@@ -7,20 +7,20 @@
       <div class="social-links mt-3 text-center">
         <a href="https://www.facebook.com/abraham.raies.3/" class="facebook"><i class="bx bxl-facebook"></i></a>
         <a href="https://www.instagram.com/abrahamraies/" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="https://github.com/Abraham74" class="github"><i class="bx bxl-github"></i></a>
+        <a href="https://github.com/abrahamraies" class="github"><i class="bx bxl-github"></i></a>
         <a href="https://www.linkedin.com/in/abraham-raies-14577921b/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
         <hr>
       </div>
     </div>
 
-    <nav id="navbar" class="nav-menu navbar">
+    <nav id="navbar" class="nav-menu navbar" >
       <ul>
-        <li><a href="#home" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Inicio</span></a></li>
-        <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Sobre mi</span></a></li>
-        <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Habilidades</span></a></li>
-        <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resumen</span></a></li>
-        <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-        <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contacto</span></a></li>
+        <li><a href="#home" (click)="selected('home')" [ngClass]="{'nav-link scrollto':true , 'active':elem1}" ><i class="bx bx-home"></i> <span>Inicio</span></a></li>
+        <li><a href="#about" (click)="selected('about')" [ngClass]="{'nav-link scrollto':true , 'active':elem2}" ><i class="bx bx-user"></i> <span>Sobre mi</span></a></li>
+        <li><a href="#skills" (click)="selected('skills')" [ngClass]="{'nav-link scrollto':true , 'active':elem3}"><i class="bx bx-user"></i> <span>Habilidades</span></a></li>
+        <li><a href="#resume" (click)="selected('resume')" [ngClass]="{'nav-link scrollto':true , 'active':elem4}"><i class="bx bx-file-blank"></i> <span>Resumen</span></a></li>
+        <li><a href="#portfolio" (click)="selected('portfolio')" [ngClass]="{'nav-link scrollto':true , 'active':elem5}"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+        <li><a href="#contact" (click)="selected('contact')" [ngClass]="{'nav-link scrollto':true , 'active':elem6}"><i class="bx bx-envelope"></i> <span>Contacto</span></a></li>
       </ul>
     </nav>
   </div>
