@@ -1,0 +1,25 @@
+.columna {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.fila {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.fila img {
+  width: 100%;
+  max-width: 100px;
+  margin: 10px;
+}
+@media only screen and (min-width: 768px) {
+  .fila img {
+    max-width: 150px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .fila img {
+    max-width: 200px;
+  }
+}
