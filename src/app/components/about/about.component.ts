@@ -11,5 +11,11 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  fechaActual =  new Date();
+  añoActual = this.fechaActual.getFullYear();
+  añoNacimiento =  2000;
+
+  edadActual = this.añoActual - this.añoNacimiento;
+
 
 }
