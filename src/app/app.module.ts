@@ -10,7 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ResumeComponent } from './components/resume/resume.component';
-import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { ProyectComponent } from './components/proyects/proyect.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CertificadosComponent } from './components/certificados/certificados.component';
 import { AllcomponentsComponent } from './components/allcomponents/allcomponents.component';
@@ -23,7 +23,7 @@ import { AllcomponentsComponent } from './components/allcomponents/allcomponents
     ContactComponent,
     SkillsComponent,
     ResumeComponent,
-    PortfolioComponent,
+    ProyectComponent,
     CertificadosComponent,
     AllcomponentsComponent
   ],

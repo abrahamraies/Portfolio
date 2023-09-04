@@ -43,7 +43,7 @@ export class AppComponent {
       this.elem4 = true;
       this.elem5 = false;
       this.elem6 = false;
-    }else if (text == 'portfolio'){
+    }else if (text == 'proyect'){
       this.elem1 = false;
       this.elem2 = false;
       this.elem3 = false;
