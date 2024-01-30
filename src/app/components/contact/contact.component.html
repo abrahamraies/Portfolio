@@ -1,8 +1,12 @@
 <section id="contact" class="contact">
   <div class="container">
 
-    <div class="section-title">
+    <div class="section-title" *ngIf="currentLanguage === 'es'">
       <h2>Contacto</h2>
+    </div>
+
+    <div class="section-title" *ngIf="currentLanguage === 'en'">
+      <h2>Contact</h2>
     </div>
 
     <div class="row" data-aos="fade-in">

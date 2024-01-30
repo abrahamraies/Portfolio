@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
   selector: 'app-contact',
@@ -7,13 +8,16 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-
+  currentLanguage!: string;
   contactForm!: FormGroup;
 
-  constructor(private readonly fb: FormBuilder) { }
+  constructor(private readonly fb: FormBuilder,private languageService: LanguageService) { }
 
   ngOnInit(): void {
     this.contactForm = this.initForm();
+    this.languageService.currentLanguage$.subscribe((language) => {
+      this.currentLanguage = language;
+    });
   }
 
   onSubmit(): void {

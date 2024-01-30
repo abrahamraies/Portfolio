@@ -1,8 +1,12 @@
 <section id="proyect" class="proyect section-bg">
   <div class="container">
 
-    <div class="section-title">
+    <div class="section-title" *ngIf="currentLanguage === 'es'">
       <h2>Proyectos</h2>
+    </div>
+
+    <div class="section-title" *ngIf="currentLanguage === 'en'">
+      <h2>Proyects</h2>
     </div>
 
     <div class="row" data-aos="fade-up">
@@ -19,7 +23,8 @@
 
       <div class="col-lg-4 col-md-6 proyect-item filter-app">
         <div class="proyect-wrap">
-          <p>App de Noticias con IONIC</p>
+          <p *ngIf="currentLanguage === 'es'">App de Noticias con IONIC</p>
+          <p *ngIf="currentLanguage === 'en'">News App with IONIC</p>
           <img src="assets/img/NoticiasPrincipal.png" class="img-fluid" alt="">
           <div class="proyect-links">
             <a href="https://marvelapp.com/prototype/2i6hebeg" target="_blank" data-gallery="Noticias App" class="proyect-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
@@ -30,7 +35,8 @@
 
       <div class="col-lg-4 col-md-6 proyect-item filter-app">
         <div class="proyect-wrap">
-          <p>App de Peliculas con IONIC</p>
+          <p *ngIf="currentLanguage === 'es'">App de Peliculas con IONIC</p>
+          <p *ngIf="currentLanguage === 'en'">Movie App with IONIC</p>
           <img src="assets/img/PeliculasPrincipal.png" class="img-fluid" alt="">
           <div class="proyect-links">
             <a href="https://marvelapp.com/prototype/j8j4i3e" target="_blank" data-gallery="proyectGallery" class="proyect-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
@@ -41,7 +47,8 @@
 
       <div class="col-lg-4 col-md-6 proyect-item filter-web">
         <div class="proyect-wrap">
-          <p>Web de Alquiler de vehiculos</p>
+          <p *ngIf="currentLanguage === 'es'">Web de Alquiler de vehiculos</p>
+          <p *ngIf="currentLanguage === 'en'">Car rental web site</p>
           <img src="assets/img/rentalsVenado.png" class="img-fluid" alt="">
           <div class="proyect-links">
             <a href="https://rentals-venado.web.app/"  target="_blank" data-gallery="proyectGallery" class="proyect-lightbox" title="Rentals Venado"><i class="bx bx-plus"></i></a>
@@ -52,7 +59,8 @@
 
       <div class="col-lg-4 col-md-6 proyect-item filter-web">
         <div class="proyect-wrap">
-          <p>Web de Noticias con Angular</p>
+          <p *ngIf="currentLanguage === 'es'">Web de Noticias con Angular</p>
+          <p *ngIf="currentLanguage === 'en'">News Web with Angular</p>
           <img src="assets/img/Imagen para portfolio.png" class="img-fluid" alt="">
           <div class="proyect-links">
             <a href="https://drive.google.com/drive/folders/1Mqw7XWESNQhPS2zuWGrOewiWdKxyUUXn?usp=sharing"  target="_blank" data-gallery="proyectGallery" class="proyect-lightbox" title="Rentals Venado"><i class="bx bx-plus"></i></a>

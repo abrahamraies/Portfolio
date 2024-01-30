@@ -1,15 +1,18 @@
 <section id="skills" class="skills section-bg">
   <div class="container">
-      <div class="section-title">
+      <div class="section-title" *ngIf="currentLanguage === 'es'">
           <h2>Habilidades Técnicas</h2>
       </div>
+      <div class="section-title" *ngIf="currentLanguage === 'en'">
+        <h2>Technical Skills</h2>
+    </div>
 
-      <div class="skills-list">
+      <div class="skills-list" *ngIf="currentLanguage === 'es'">
           <div class="skills-category">
               <h4>Lenguajes de Programación:</h4>
               <ul>
                   <li>C#</li>
-                  <li>Javascript</li>
+                  <li>JavaScript/TypeScript</li>
                   <li>Java</li>
               </ul>
           </div>
@@ -32,7 +35,7 @@
           <div class="skills-category">
               <h4>Herramientas de Desarrollo:</h4>
               <ul>
-                  <li>Visual Studio 2022 / Code</li>
+                  <li>Visual Studio / Code</li>
                   <li>Git</li>
                   <li>Docker</li>
               </ul>
@@ -47,10 +50,61 @@
           <div class="skills-category">
             <h4>Herramientas de Integracion/Mensajeria:</h4>
             <ul>
-                <li>SAP CPI (CLoud Platform Integration)</li>
+                <li>Azure</li>
                 <li>RabbitMQ</li>
+                <li>SAP CPI (CLoud Platform Integration)</li>
             </ul>
         </div>
       </div>
+
+      <div class="skills-list" *ngIf="currentLanguage === 'en'">
+        <div class="skills-category">
+            <h4>Programming Languages:</h4>
+            <ul>
+                <li>C#</li>
+                <li>JavaScript/TypeScript</li>
+                <li>Java</li>
+            </ul>
+        </div>
+        <div class="skills-category">
+            <h4>Frameworks:</h4>
+            <ul>
+                <li>.NET Core</li>
+                <li>Angular</li>
+                <li>Spring Boot</li>
+            </ul>
+        </div>
+        <div class="skills-category">
+            <h4>Databases:</h4>
+            <ul>
+                <li>SQL Server</li>
+                <li>MySQL</li>
+                <li>MongoDB</li>
+            </ul>
+        </div>
+        <div class="skills-category">
+            <h4>Development Tools:</h4>
+            <ul>
+                <li>Visual Studio / Code</li>
+                <li>Git</li>
+                <li>Docker</li>
+            </ul>
+        </div>
+        <div class="skills-category">
+            <h4>Methodologies:</h4>
+            <ul>
+                <li>Scrum</li>
+                <li>Kanban - Jira</li>
+            </ul>
+        </div>
+        <div class="skills-category">
+          <h4>Integration/Messaging Tools:</h4>
+          <ul>
+              <li>Azure</li>
+              <li>RabbitMQ</li>
+              <li>SAP CPI (CLoud Platform Integration)</li>
+          </ul>
+      </div>
+    </div>
   </div>
 </section>
