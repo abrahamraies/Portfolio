@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { LanguageService } from './services/language.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
+  currentLanguage!: string;
   title = 'Portfolio';
   elem1 = false;
   elem2 = false;
@@ -13,6 +15,8 @@ export class AppComponent {
   elem4 = false;
   elem5 = false;
   elem6 = false;
+
+  constructor(private languageService: LanguageService){}
 
   selected(text:string): void{
     if(text == 'home'){
@@ -58,5 +62,11 @@ export class AppComponent {
       this.elem5 = false;
       this.elem6 = true;
     }
+  }
+
+  ngOnInit(): void {
+    this.languageService.currentLanguage$.subscribe((language) => {
+      this.currentLanguage = language;
+    });
   }
 }
