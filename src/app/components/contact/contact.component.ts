@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { LanguageService } from 'src/app/services/language.service';
 
 @Component({
@@ -9,9 +9,9 @@ import { LanguageService } from 'src/app/services/language.service';
 })
 export class ContactComponent implements OnInit {
   currentLanguage!: string;
-  contactForm!: FormGroup;
+  contactForm!: UntypedFormGroup;
 
-  constructor(private readonly fb: FormBuilder,private languageService: LanguageService) { }
+  constructor(private readonly fb: UntypedFormBuilder,private languageService: LanguageService) { }
 
   ngOnInit(): void {
     this.contactForm = this.initForm();
@@ -24,7 +24,7 @@ export class ContactComponent implements OnInit {
     //console.log(this.contactForm.value);
   }
 
-  initForm(): FormGroup {
+  initForm(): UntypedFormGroup {
     return this.fb.group({
       name: ['',[Validators.required, Validators.minLength(3)]],
       email: ['',[Validators.required, Validators.minLength(3),Validators.email]],
