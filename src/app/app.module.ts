@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxTypedJsModule } from 'ngx-typed-js';
-import { ProgressBarAngularModule } from "progress-bar-angular";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -30,7 +29,6 @@ import { AllcomponentsComponent } from './components/allcomponents/allcomponents
   imports: [
     BrowserModule,
     NgxTypedJsModule,
-    ProgressBarAngularModule,
     ReactiveFormsModule,
     AppRoutingModule
   ],
