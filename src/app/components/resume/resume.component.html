@@ -4,61 +4,29 @@
     <div class="section-title" *ngIf="currentLanguage === 'es'">
       <h2>Resumen</h2>
       <p>
-        Durante tres años, cursé la carrera de Ingeniería en Sistemas de Información en la Universidad Tecnológica Nacional de Rosario. Sin embargo, con el inicio de la pandemia, regresé a mi ciudad natal, Venado Tuerto, donde decidí iniciar la Tecnicatura en Programación en la misma institución. Logré completar esta segunda carrera en noviembre de 2022. En la actualidad, me encuentro dedicado a la mejora continua mediante la participación en cursos adicionales y la ampliación de mis habilidades, además de dedicar tiempo al aprendizaje del idioma inglés.</p>
+        Desde el 2018 al 2020, cursé la carrera de Ingeniería en Sistemas de Información en la Universidad Tecnológica Nacional de Rosario. Durante la pandemia, regresé a mi ciudad natal, Venado Tuerto, donde elegí inscribirme en el programa de Técnico en Programación de la misma institución. Terminé este programa con distinción en noviembre de 2022.
+        <br>
+        Mi educación me ha dotado de una base sólida en sistemas de información y programación. Para mejorar aún más mis habilidades y mantenerme al tanto de los desarrollos de la industria, participo activamente en cursos adicionales y oportunidades de desarrollo profesional. Actualmente, también me dedico a mejorar mi dominio del inglés, que considero esencial para mi crecimiento y éxito continuos en la industria tecnológica global.</p>
     </div>
 
     <div class="section-title" *ngIf="currentLanguage === 'en'">
       <h2>Summary</h2>
       <p>
-        For three years, I pursued a degree in Information Systems Engineering at the National Technological University of Rosario. However, with the onset of the pandemic, I returned to my hometown, Venado Tuerto, where I decided to enroll in the Programming Technician program at the same institution. I successfully completed this second degree in November 2022. Currently, I am devoted to continuous improvement by participating in additional courses and expanding my skills, as well as dedicating time to learning English.</p>
+        From 2018 to 2020, I studied Information Systems Engineering at the National Technological University of Rosario. During the pandemic, I returned to my hometown, Venado Tuerto, where I chose to enroll in the Programming Technician program at the same institution. I completed this program with distinction in November 2022.
+        <br>
+        <br>
+        My education has provided me with a solid foundation in information systems and programming. To further enhance my skills and keep abreast of industry developments, I actively participate in additional courses and professional development opportunities. Currently, I am also dedicated to improving my English proficiency, which I consider essential to my continued growth and success in the global technology industry.
+      </p>
     </div>
 
     <div class="row" *ngIf="currentLanguage === 'es'">
-      <div class="col-lg-6" data-aos="fade-up">
-        <h3 class="resume-title">Cursos</h3>
-        <div class="resume-item pb-0">
-          <h4>Google</h4>
-          <ul>
-            <li>Google Cloud Essentials - Diciembre 2022</li>
-          </ul>
-          <h4>Udemy</h4>
-          <ul>
-            <li>Microservices con ASP.NET 6 y RabbitMQ - Vaxi Drez - Septiembre 2023</li>
-            <li>Ionic 6+ - Fernando Herrera - Septiembre 2022</li>
-            <li>SAP CPI - Yee Loon Khoo - Junio 2022</li>
-            <li>Solid y Clean Code - Daniel Calviño - Febrero 2022</li>
-            <li>.NET Core - Jimmy Javier - Febrero 2022</li>
-            <li>Azure Devops - Alberto Picazo - Febrero 2022</li>
-          </ul>
-        </div>
-
-
-        <h3 class="resume-title">Educacion</h3>
-        <div class="resume-item">
-          <h4>TECNICATURA EN PROGRAMACIÓN</h4>
-          <h5>2021 - 2022 </h5>
-          <p><em>UNIVERSIDAD TECNOLÓGICA NACIONAL, VT</em></p>
-          <p>Durante el primer año de mi carrera, adquirí conocimientos sólidos en Java utilizando el IDE NetBeans. En el segundo año, me enfoqué en Spring Boot y Angular, complementando mi experiencia con el uso de GitHub y las bases de Docker. Estos aprendizajes fueron fundamentales para mi graduación, donde obtuve sólidos conocimientos en programación web, bases de datos y diseño de software, los cuales fueron adquiridos y desarrollados a lo largo de mi carrera universitaria.</p>
-        </div>
-        <div class="resume-item">
-          <h4>INGENIERÍA EN SISTEMAS DE INFORMACIÓN</h4>
-          <h5>2018 - 2020</h5>
-          <p><em>UNIVERSIDAD TECNOLÓGICA NACIONAL, ROS</em></p>
-          <p>Cursé dos años de Ingeniería en Sistemas, obteniendo una sólida base en conceptos fundamentales y prácticas de desarrollo de
-            software.
-            Desarrollé habilidades en áreas clave como programación, diseño de
-            algoritmos y gestión de proyectos.
-            Aunque decidí interrumpir mis estudios, la experiencia proporcionó
-            una base valiosa que continúa influyendo positivamente en mi enfoque
-            hacia los desafíos tecnológicos.</p>
-        </div>
-      </div>
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-        <h3 class="resume-title">Experiencia profesional</h3>
+      <!-- Experiencia profesional -->
+      <div class="col-lg-12" data-aos="fade-up">
+        <h3 class="resume-title" style="text-align: center;">Experiencia profesional</h3> <!--Modificar las experiencias del laburo y del freelance, agregar cursos de microsoft, agregar certificados, modificar los conocimientos adquiridos en la facu.-->
         <div class="resume-item">
           <h4>Desarrollador Backend</h4>
-          <h5>2021 - Actualidad</h5>
-          <p><em>Cooperacion Seguros, VT </em></p>
+          <h5>2021 - 2024</h5>
+          <p><em>Cooperacion Seguros, VT</em></p>
           <ul>
             <li>Lideré el desarrollo de aplicaciones web utilizando SAP CPI como middleware y .NET Core como Backend.</li>
             <li>Interactué directamente con clientes para definir y optimizar funcionalidades de los servicios.</li>
@@ -78,16 +46,27 @@
             <li>Creé y mantuve bases de datos eficientes y escalables, utilizando MariaDB.</li>
           </ul>
         </div>
-        <h4 class="resume-title">Certificados</h4>
-        <a routerLink="/certificados"><h5>UDEMY - GOOGLE - OPEN ENGLISH</h5></a>
-        <h4 class="resume-title">Test's</h4>
-        <a href="https://firebasestorage.googleapis.com/v0/b/frontend-portfolio-b48a3.appspot.com/o/Test_Competencias.pdf?alt=media&token=72f618e4-fc5a-42f5-a45c-d1fa966259e7" target="_blank"><h5>Test de competencias</h5></a>
       </div>
 
-    </div>
+      <!-- Educación -->
+      <div class="col-lg-12" data-aos="fade-up">
+        <h3 class="resume-title">Educacion</h3>
+        <div class="resume-item">
+          <h4>TECNICATURA EN PROGRAMACIÓN</h4>
+          <h5>2021 - 2022 </h5>
+          <p><em>UNIVERSIDAD TECNOLÓGICA NACIONAL, VT</em></p>
+          <p>Durante el primer año de mi carrera, adquirí conocimientos sólidos en Java utilizando el IDE NetBeans. En el segundo año, me enfoqué en Spring Boot y Angular, complementando mi experiencia con el uso de GitHub y las bases de Docker. Estos aprendizajes fueron fundamentales para mi graduación, donde obtuve sólidos conocimientos en programación web, bases de datos y diseño de software, los cuales fueron adquiridos y desarrollados a lo largo de mi carrera universitaria.</p>
+        </div>
+        <div class="resume-item">
+          <h4>INGENIERÍA EN SISTEMAS</h4>
+          <h5>2018 - 2020</h5>
+          <p><em>UNIVERSIDAD TECNOLÓGICA NACIONAL, ROS</em></p>
+          <p>Cursé dos años de Ingeniería en Sistemas, obteniendo una sólida base en conceptos fundamentales y prácticas de desarrollo de software. Aunque decidí interrumpir mis estudios, la experiencia proporcionó una base valiosa que continúa influyendo positivamente en mi enfoque hacia los desafíos tecnológicos.</p>
+        </div>
+      </div>
 
-    <div class="row" *ngIf="currentLanguage === 'en'">
-      <div class="col-lg-6" data-aos="fade-up">
+      <!-- Cursos -->
+      <div class="col-lg-12" data-aos="fade-up">
         <h3 class="resume-title">Cursos</h3>
         <div class="resume-item pb-0">
           <h4>Google</h4>
@@ -96,43 +75,33 @@
           </ul>
           <h4>Udemy</h4>
           <ul>
-            <li>Microservices con ASP.NET 6 y RabbitMQ - Vaxi Drez - September 2023</li>
-            <li>Ionic 6+ - Fernando Herrera - September 2022</li>
-            <li>SAP CPI - Yee Loon Khoo - June 2022</li>
-            <li>Solid y Clean Code - Daniel Calviño - February 2022</li>
-            <li>.NET Core - Jimmy Javier - February 2022</li>
-            <li>Azure Devops - Alberto Picazo - February 2022</li>
+            <li>Microservices con ASP.NET 6 y RabbitMQ - Vaxi Drez - Septiembre 2023</li>
+            <li>Ionic 6+ - Fernando Herrera - Septiembre 2022</li>
+            <li>SAP CPI - Yee Loon Khoo - Junio 2022</li>
+            <li>Solid y Clean Code - Daniel Calviño - Febrero 2022</li>
+            <li>.NET Core - Jimmy Javier - Febrero 2022</li>
+            <li>Azure Devops - Alberto Picazo - Febrero 2022</li>
           </ul>
-        </div>
-
-
-        <h3 class="resume-title">Education</h3>
-        <div class="resume-item">
-          <h4>PROGRAMMING TECHNICIAN</h4>
-          <h5>2021 - 2022 </h5>
-          <p><em>UNIVERSIDAD TECNOLÓGICA NACIONAL, VT</em></p>
-          <p>During the first year of my degree, I acquired solid knowledge in Java using the NetBeans IDE. In the second year, I focused on Spring Boot and Angular, complementing my experience with the use of GitHub and Docker foundations. These learnings were fundamental for my graduation, where I gained solid knowledge in web programming, databases and software design, which were acquired and developed throughout my university career.</p>
-        </div>
-        <div class="resume-item">
-          <h4>INFORMATION SYSTEMS ENGINEERING</h4>
-          <h5>2018 - 2020</h5>
-          <p><em>UNIVERSIDAD TECNOLÓGICA NACIONAL, ROS</em></p>
-          <p>I studied two years of Systems Engineering, obtaining a solid foundation in fundamental concepts and practices of software development.
-            development practices.
-            I developed skills in key areas such as programming, algorithm design and project management.
-            design and project management.
-            Although I decided to discontinue my studies, the experience provided a valuable foundation that continues to influence me.
-            valuable foundation that continues to positively influence my approach to technology challenges.
-            to technological challenges.</p>
         </div>
       </div>
 
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-        <h3 class="resume-title">Professional Experience</h3>
+      <!-- Certificados y Test's -->
+      <div class="col-lg-12" data-aos="fade-up">
+        <h3 class="resume-title">Certificados</h3>
+        <a routerLink="/certificados"><h5>UDEMY - GOOGLE - OPEN ENGLISH</h5></a>
+        <h4 class="resume-title">Test's</h4>
+        <a href="https://firebasestorage.googleapis.com/v0/b/frontend-portfolio-b48a3.appspot.com/o/Test_Competencias.pdf?alt=media&token=72f618e4-fc5a-42f5-a45c-d1fa966259e7" target="_blank"><h5>Test de competencias</h5></a>
+      </div>
+    </div>
+
+    <div class="row" *ngIf="currentLanguage === 'en'">
+      <!-- Professional Experience -->
+      <div class="col-lg-12" data-aos="fade-up">
+        <h3 class="resume-title" style="text-align: center;">Professional Experience</h3>
         <div class="resume-item">
           <h4>Backend Developer</h4>
-          <h5>2021 - Currently</h5>
-          <p><em>Cooperacion Seguros, VT </em></p>
+          <h5>2021 - 2024</h5>
+          <p><em>Cooperacion Seguros, VT</em></p>
           <ul>
             <li>Led the development of web applications using SAP CPI as middleware and .NET Core as the Backend.</li>
             <li>Interacted directly with clients to define and optimize service functionalities.</li>
@@ -143,7 +112,7 @@
           </ul>
         </div>
         <div class="resume-item">
-          <h4>Desarrollador Full Stack</h4>
+          <h4>Full Stack Developer</h4>
           <h5>2023 - Currently</h5>
           <p><em>FREELANCE</em></p>
           <ul>
@@ -152,13 +121,54 @@
             <li>Created and maintained efficient and scalable databases using MariaDB.</li>
           </ul>
         </div>
-        <h4 class="resume-title">Certificates</h4>
-        <a routerLink="/certificados"><h5>UDEMY - GOOGLE - OPEN ENGLISH</h5></a>
-        <h4 class="resume-title">Test's</h4>
-        <a href="https://firebasestorage.googleapis.com/v0/b/frontend-portfolio-b48a3.appspot.com/o/Test_Competencias.pdf?alt=media&token=72f618e4-fc5a-42f5-a45c-d1fa966259e7" target="_blank"><h5>Test of competencies</h5></a>
       </div>
 
+      <!-- Education -->
+      <div class="col-lg-12" data-aos="fade-up">
+        <h3 class="resume-title">Education</h3>
+        <div class="resume-item">
+          <h4>PROGRAMMING TECHNICIAN</h4>
+          <h5>2021 - 2022 </h5>
+          <p><em>National Technological University</em></p>
+          <p>During the first year of my degree, I acquired solid knowledge in Java using the NetBeans IDE. In the second year, I focused on Spring Boot and Angular, complementing my experience with the use of GitHub and the foundations of Docker. These learnings were fundamental to my graduation, where I obtained solid knowledge in web programming, databases, and software design, which were acquired and developed throughout my university career.</p>
+        </div>
+        <div class="resume-item">
+          <h4>SYSTEMS ENGINEERING</h4>
+          <h5>2018 - 2020</h5>
+          <p><em>National Technological University</em></p>
+          <p>I completed two years of Systems Engineering, obtaining a solid foundation in fundamental concepts and software development practices. Although I decided to interrupt my studies, the experience provided a valuable foundation that continues to positively influence my approach to technological challenges.</p>
+        </div>
+      </div>
+
+      <!-- Courses -->
+      <div class="col-lg-12" data-aos="fade-up">
+        <h3 class="resume-title">Courses</h3>
+        <div class="resume-item pb-0">
+          <h4>Google</h4>
+          <ul>
+            <li>Google Cloud Essentials - December 2022</li>
+          </ul>
+          <h4>Udemy</h4>
+          <ul>
+            <li>Microservices with ASP.NET 6 and RabbitMQ - Vaxi Drez - September 2023</li>
+            <li>Ionic 6+ - Fernando Herrera - September 2022</li>
+            <li>SAP CPI - Yee Loon Khoo - June 2022</li>
+            <li>Solid and Clean Code - Daniel Calviño - February 2022</li>
+            <li>.NET Core - Jimmy Javier - February 2022</li>
+            <li>Azure Devops - Alberto Picazo - February 2022</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Certificates and Tests -->
+      <div class="col-lg-12" data-aos="fade-up">
+        <h3 class="resume-title">Certificates</h3>
+        <a routerLink="/certificados"><h5>UDEMY - GOOGLE - OPEN ENGLISH</h5></a>
+        <h4 class="resume-title">Tests</h4>
+        <a href="https://firebasestorage.googleapis.com/v0/b/frontend-portfolio-b48a3.appspot.com/o/Test_Competencias.pdf?alt=media&token=72f618e4-fc5a-42f5-a45c-d1fa966259e7" target="_blank"><h5>Competencies Test</h5></a>
+      </div>
     </div>
+
 
   </div>
 </section>

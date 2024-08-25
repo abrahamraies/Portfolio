@@ -7,7 +7,7 @@ import { CertificadosComponent } from './components/certificados/certificados.co
 const routes: Routes = [
   {path: 'certificados', component: CertificadosComponent},
   {path: 'about', component: AboutComponent},
-  { path: '**', redirectTo: '', pathMatch: 'full', component: AllcomponentsComponent}
+  {path: '', pathMatch: 'full', component: AllcomponentsComponent}
 ];
 
 @NgModule({

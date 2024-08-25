@@ -1,109 +1,111 @@
 <section id="skills" class="skills section-bg">
   <div class="container">
-      <div class="section-title" *ngIf="currentLanguage === 'es'">
-          <h2>Habilidades Técnicas</h2>
-      </div>
-      <div class="section-title" *ngIf="currentLanguage === 'en'">
-        <h2>Technical Skills</h2>
+    <div class="section-title" *ngIf="currentLanguage === 'es'">
+      <h2>Habilidades Técnicas</h2>
+    </div>
+    <div class="section-title" *ngIf="currentLanguage === 'en'">
+      <h2>Technical Skills</h2>
     </div>
 
-      <div class="skills-list" *ngIf="currentLanguage === 'es'">
-          <div class="skills-category">
-              <h4>Lenguajes de Programación:</h4>
-              <ul>
-                  <li>C#</li>
-                  <li>JavaScript/TypeScript</li>
-                  <li>Java</li>
-              </ul>
-          </div>
-          <div class="skills-category">
-              <h4>Frameworks:</h4>
-              <ul>
-                  <li>.NET Core</li>
-                  <li>Angular</li>
-                  <li>Spring Boot</li>
-              </ul>
-          </div>
-          <div class="skills-category">
-              <h4>Bases de Datos:</h4>
-              <ul>
-                  <li>SQL Server</li>
-                  <li>MySQL</li>
-                  <li>MongoDB</li>
-              </ul>
-          </div>
-          <div class="skills-category">
-              <h4>Herramientas de Desarrollo:</h4>
-              <ul>
-                  <li>Visual Studio / Code</li>
-                  <li>Git</li>
-                  <li>Docker</li>
-              </ul>
-          </div>
-          <div class="skills-category">
-              <h4>Metodologías:</h4>
-              <ul>
-                  <li>Scrum</li>
-                  <li>Kanban - Jira</li>
-              </ul>
-          </div>
-          <div class="skills-category">
-            <h4>Herramientas de Integracion/Mensajeria:</h4>
-            <ul>
-                <li>Azure</li>
-                <li>RabbitMQ</li>
-                <li>SAP CPI (CLoud Platform Integration)</li>
-            </ul>
-        </div>
+    <div class="skills-list" *ngIf="currentLanguage === 'es'">
+      <div class="skills-category">
+        <h4>Lenguajes de Programación</h4>
+        <ul>
+          <li><i class="devicon-csharp-plain colored"></i> C#</li>
+          <li><i class="fa-brands fa-js" style="color: #74C0FC;"></i> JavaScript/TypeScript</li>
+          <li><i class="fa-brands fa-java"></i> Java</li>
+        </ul>
       </div>
+      <div class="skills-category">
+        <h4>Frameworks</h4>
+        <ul>
+          <li><i class="devicon-dotnetcore-plain colored"></i> .NET Core</li>
+          <li><i class="devicon-angularjs-plain colored"></i> Angular</li>
+          <li><i class="devicon-spring-original colored"></i> Spring Boot</li>
+        </ul>
+      </div>
+      <div class="skills-category">
+        <h4>Bases de Datos</h4>
+        <ul>
+          <li><i class="devicon-microsoftsqlserver-plain colored"></i> SQL Server</li>
+          <li><i class="devicon-mysql-original colored"></i> MySQL</li>
+          <li><i class="devicon-mongodb-plain colored"></i> MongoDB</li>
+        </ul>
+      </div>
+      <div class="skills-category">
+        <h4>Herramientas de Desarrollo</h4>
+        <ul>
+          <li><i class="devicon-vscode-plain colored"></i> Visual Studio / Code</li>
+          <li><i class="devicon-git-plain colored"></i> Git</li>
+          <li><i class="devicon-docker-plain colored"></i> Docker</li>
+        </ul>
+      </div>
+      <div class="skills-category">
+        <h4>Metodologías</h4>
+        <ul>
+          <li><i class="fa-solid fa-list-check"></i> Scrum</li>
+          <li><i class="devicon-jira-plain colored"></i> Kanban - Jira</li>
+          <li><i class="fa-solid fa-rotate"></i> Agile</li>
+        </ul>
+      </div>
+      <div class="skills-category">
+        <h4>Integración y Mensajería</h4>
+        <ul>
+          <li><i class="devicon-azure-plain colored"></i> Azure</li>
+          <li><i class="devicon-rabbitmq-original colored"></i> RabbitMQ</li>
+          <li><i class="fa-solid fa-cloud"></i> SAP CPI</li>
+        </ul>
+      </div>
+    </div>
 
-      <div class="skills-list" *ngIf="currentLanguage === 'en'">
-        <div class="skills-category">
-            <h4>Programming Languages:</h4>
-            <ul>
-                <li>C#</li>
-                <li>JavaScript/TypeScript</li>
-                <li>Java</li>
-            </ul>
-        </div>
-        <div class="skills-category">
-            <h4>Frameworks:</h4>
-            <ul>
-                <li>.NET Core</li>
-                <li>Angular</li>
-                <li>Spring Boot</li>
-            </ul>
-        </div>
-        <div class="skills-category">
-            <h4>Databases:</h4>
-            <ul>
-                <li>SQL Server</li>
-                <li>MySQL</li>
-                <li>MongoDB</li>
-            </ul>
-        </div>
-        <div class="skills-category">
-            <h4>Development Tools:</h4>
-            <ul>
-                <li>Visual Studio / Code</li>
-                <li>Git</li>
-                <li>Docker</li>
-            </ul>
-        </div>
-        <div class="skills-category">
-            <h4>Methodologies:</h4>
-            <ul>
-                <li>Scrum</li>
-                <li>Kanban - Jira</li>
-            </ul>
-        </div>
-        <div class="skills-category">
-          <h4>Integration/Messaging Tools:</h4>
-          <ul>
-              <li>Azure</li>
-              <li>RabbitMQ</li>
-              <li>SAP CPI (CLoud Platform Integration)</li>
-          </ul>
+    <div class="skills-list" *ngIf="currentLanguage === 'en'">
+      <div class="skills-category">
+        <h4>Programming Languages</h4>
+        <ul>
+          <li><i class="devicon-csharp-plain colored"></i> C#</li>
+          <li><i class="devicon-javascript-plain colored"></i> JavaScript/TypeScript</li>
+          <li><i class="devicon-java-plain colored"></i> Java</li>
+        </ul>
+      </div>
+      <div class="skills-category">
+        <h4>Frameworks</h4>
+        <ul>
+          <li><i class="devicon-dotnetcore-plain colored"></i> .NET Core</li>
+          <li><i class="devicon-angularjs-plain colored"></i> Angular</li>
+          <li><i class="devicon-spring-original colored"></i> Spring Boot</li>
+        </ul>
+      </div>
+      <div class="skills-category">
+        <h4>Databases</h4>
+        <ul>
+          <li><i class="devicon-microsoftsqlserver-plain colored"></i> SQL Server</li>
+          <li><i class="devicon-mysql-original colored"></i> MySQL</li>
+          <li><i class="devicon-mongodb-plain colored"></i> MongoDB</li>
+        </ul>
+      </div>
+      <div class="skills-category">
+        <h4>Development Tools</h4>
+        <ul>
+          <li><i class="devicon-vscode-plain colored"></i> Visual Studio / Code</li>
+          <li><i class="devicon-git-plain colored"></i> Git</li>
+          <li><i class="devicon-docker-plain colored"></i> Docker</li>
+        </ul>
+      </div>
+      <div class="skills-category">
+        <h4>Methodologies</h4>
+        <ul>
+          <li><i class="fa-solid fa-list-check"></i> Scrum</li>
+          <li><i class="devicon-jira-plain colored"></i> Kanban - Jira</li>
+          <li><i class="fa-solid fa-rotate"></i> Agile</li>
+        </ul>
+      </div>
+      <div class="skills-category">
+        <h4>Integration - Messaging</h4>
+        <ul>
+          <li><i class="devicon-azure-plain colored"></i> Azure</li>
+          <li><i class="devicon-rabbitmq-original colored"></i> RabbitMQ</li>
+          <li><i class="fa-solid fa-cloud"></i> SAP CPI</li>
+        </ul>
       </div>
     </div>
   </div>

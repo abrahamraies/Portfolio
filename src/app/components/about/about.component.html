@@ -1,73 +1,23 @@
 <section id="about" class="about">
   <div class="container">
     <div class="container-idiom">
-      <button style="display: flex; justify-content: flex-end;" (click)="changeLanguage()">{{Idiom}}</button>
+      <button (click)="changeLanguage()">{{Idiom}}</button>
     </div>
 
-    <div class="section-title" *ngIf="currentLanguage === 'es'">
-      <h2>Sobre mi</h2>
-      <p>¡Hola! Soy Abraham Raies, un joven desarrollador. Me gusta viajar, leer y hacer ciclismo. Repecto al trabajo me adapto facilmente, soy responsable y solidario. Disfruto del trabajo en equipo y creo en la importancia de un buen ambiente laboral. Estoy en constante búsqueda de desafíos y oportunidades para aprender y crecer como profesional.</p>
+    <div class="section-title">
+      <h2>{{ currentLanguage === 'es' ? 'Sobre mí' : 'About me' }}</h2>
+      <p>{{ aboutMeIntro }}</p>
     </div>
 
-    <div class="section-title" *ngIf="currentLanguage === 'en'">
-      <h2>About me</h2>
-      <p>Hi! I'm Abraham Raies, a young developer. I like traveling, reading and cycling. Regarding work I adapt easily, I am responsible and supportive. I enjoy teamwork and believe in the importance of a good work environment. I am constantly looking for challenges and opportunities to learn and grow as a professional.</p>
-    </div>
-
-    <div class="row" *ngIf="currentLanguage === 'es'">
-      <div class="col-lg-4" data-aos="fade-right" style="display: flex;justify-content: center;">
-        <img src="assets/img/aboutMe.jpg"  width="100%">
+    <div class="row">
+      <div class="col-lg-4" data-aos="fade-right" style="display: flex; justify-content: center;">
+        <img src="assets/img/aboutMe.jpg" width="90%">
       </div>
       <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-        <h3>Desarrollador</h3>
-        <p class="fst-italic">
-          En mi actual rol laboral en una destacada compañía de seguros, lidero proyectos de desarrollo utilizando tecnologías como .NET Core, SAP CPI y SQL Server. Mis responsabilidades incluyen:
-
-          <li>Desarrollo y mantenimiento de aplicaciones con .NET CORE y SQL Server.</li>
-          <li>Integración de soluciones utilizando herramientas como SAP CPI / RabbitMQ.</li>
-          <li>Resolución de problemas y optimización.</li>
-          <li>Fomento del aprendizaje continuo y la colaboración.</li>
-          <li>Mi enfoque principal radica en contribuir al éxito global del equipo y la empresa, siempre buscando oportunidades para aprender y avanzar en mi carrera profesional.</li>
-        </p>
-        <p>
-          Persisto en la búsqueda constante de ampliar mis conocimientos en nuevas tecnologías y enfrentar desafíos con entusiasmo. Mi enfoque autodidacta me permite desenvolverme eficazmente en equipo, donde destaco por mi capacidad de comprender a fondo los problemas para abordarlos desde su origen.
-          <br>
-          En el ámbito personal, dedico mis tiempos libres al desarrollo de proyectos freelance utilizando herramientas avanzadas como Angular, .NET Core, Sql Server, MySql,etc. Este compromiso adicional refleja mi pasión por la innovación y mi deseo de mantenerme actualizado en las últimas tendencias tecnológicas.
-          <br>
-          Actualmente cuento con un <a href="https://firebasestorage.googleapis.com/v0/b/frontend-portfolio-b48a3.appspot.com/o/certificate_level8.pdf?alt=media&token=942e8bf1-bde0-45a4-9989-565438b09785" target="_blank"><b>nivel de ingles B2</b></a> Certificado IELTS: <a href="https://firebasestorage.googleapis.com/v0/b/frontend-portfolio-b48a3.appspot.com/o/AR63023500101-06-01-2024-ETRF.pdf?alt=media&token=fc8f05c5-5f98-4ef0-a0fb-0c548ef09fae" target="_blank"><b>IELTS</b></a>
-          <br>
-          <br>
-          Gracias por visitar mi portfolio y conocer un poco más sobre mí.
-        </p>
+        <h3>{{ currentLanguage === 'es' ? 'Desarrollador de Software' : 'Software Developer' }}</h3>
+        <p>{{ aboutMeDescription }}</p>
+        <p [innerHTML]="aboutMeDetails"></p>
       </div>
     </div>
-
-    <div class="row" *ngIf="currentLanguage === 'en'">
-      <div class="col-lg-4" data-aos="fade-right" style="display: flex;justify-content: center;">
-        <img src="assets/img/aboutMe.jpg"  width="100%">
-      </div>
-      <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-        <h3>Developer</h3>
-        <p class="fst-italic">
-          In my current role at a prominent insurance company, I lead development projects using technologies such as .NET Core, SAP CPI, and SQL Server. My responsibilities include:
-            <li>Development and maintenance of applications with .NET Core and SQL Server.</li>
-            <li>Integration of solutions using tools like SAP CPI / RabbitMQ.</li>
-            <li>Troubleshooting and optimization.</li>
-            <li>Promotion of continuous learning and collaboration.</li>
-            <li>My primary focus is on contributing to the overall success of the team and the company, always seeking opportunities to learn and advance in my professional career.</li>
-        </p>
-        <p>
-          I persist in the constant pursuit of expanding my knowledge in new technologies and tackling challenges with enthusiasm. My self-taught approach allows me to effectively work in a team, where I stand out for my ability to thoroughly understand problems to address them at their roots.
-          <br>
-          On a personal level, I dedicate my free time to the development of freelance projects using advanced tools such as Angular, .NET Core, SQL Server, MySQL, etc. This additional commitment reflects my passion for innovation and my desire to stay updated on the latest technological trends.
-          <br>
-          Currently, I hold a <a href="https://firebasestorage.googleapis.com/v0/b/frontend-portfolio-b48a3.appspot.com/o/certificate_level8.pdf?alt=media&token=942e8bf1-bde0-45a4-9989-565438b09785" target="_blank"><b>English level B2</b></a> certified by IELTS: <a href="https://firebasestorage.googleapis.com/v0/b/frontend-portfolio-b48a3.appspot.com/o/AR63023500101-06-01-2024-ETRF.pdf?alt=media&token=fc8f05c5-5f98-4ef0-a0fb-0c548ef09fae" target="_blank"><b>IELTS</b></a>.
-          <br>
-          <br>
-          Thank you for visiting my portfolio and learning a bit more about me.
-        </p>
-      </div>
-    </div>
-
   </div>
 </section>
