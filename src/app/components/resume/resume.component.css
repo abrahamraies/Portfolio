@@ -108,7 +108,7 @@ ul li {
 /* Cursos, Certificados y Tests */
 .resume-item ul li::before {
   content: "\2022";
-  color: #ff8c00; /* Cambia el color del punto */
+  color: #ff8c00;
   font-weight: bold;
   display: inline-block;
   width: 1em;
@@ -144,7 +144,7 @@ ul li {
   width: 100%;
 }
 
-/* Animación de desplazamiento */
+
 [data-aos="fade-up"] {
   opacity: 0;
   transform: translateY(20px);
@@ -156,7 +156,7 @@ ul li {
   transform: translateY(0);
 }
 
-/* Estilos para enlaces */
+
 a {
   color: #007bff;
   text-decoration: none;
