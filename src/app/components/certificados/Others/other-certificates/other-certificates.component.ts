@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-other-certificates',
@@ -9,4 +10,16 @@ import { Component } from '@angular/core';
 })
 export class OtherCertificatesComponent {
 
+  constructor(private router: Router) { }
+
+  goBackToSection(sectionId: string): void {
+
+    this.router.navigate(['/']).then(() => {
+
+      const section = document.querySelector(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
 }
