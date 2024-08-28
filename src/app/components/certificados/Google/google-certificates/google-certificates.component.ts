@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-google-certificates',
@@ -8,5 +9,18 @@ import { Component } from '@angular/core';
   styleUrl: './google-certificates.component.css'
 })
 export class GoogleCertificatesComponent {
+
+  constructor(private router: Router) { }
+
+  goBackToSection(sectionId: string): void {
+
+    this.router.navigate(['/']).then(() => {
+
+      const section = document.querySelector(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LanguageService } from './services/language.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,23 @@ export class AppComponent implements OnInit{
   elem5 = false;
   elem6 = false;
 
-  constructor(private languageService: LanguageService){}
+  constructor(private languageService: LanguageService,private router: Router, private route: ActivatedRoute){
+    this.router.events.subscribe(() => {
+      this.currentRoute = this.router.url;
+    });
+  }
+  currentRoute: string = '';
+  excludedRoutes: string[] = [
+    '/certificates',
+    '/certificates/others',
+    '/certificates/udemy',
+    '/certificates/google',
+    '/certificados'
+  ];
+
+  isRouteExcluded(): boolean {
+    return this.excludedRoutes.includes(this.currentRoute);
+  }
 
   selected(text:string): void{
     if(text == 'home'){
@@ -68,5 +85,16 @@ export class AppComponent implements OnInit{
     this.languageService.currentLanguage$.subscribe((language) => {
       this.currentLanguage = language;
     });
+  }
+
+  scrollToTop() {
+    const scrollStep = -window.scrollY / (1000 / 15);
+    const scrollInterval = setInterval(() => {
+      if (window.scrollY !== 0) {
+        window.scrollBy(0, scrollStep);
+      } else {
+        clearInterval(scrollInterval);
+      }
+    }, 15);
   }
 }
