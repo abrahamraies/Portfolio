@@ -21,22 +21,13 @@ export class ProyectComponent implements OnInit {
 
   projects: Project[] = [
     {
-      titleEs: 'App de Noticias con IONIC',
-      titleEn: 'News App with IONIC',
-      image: 'assets/img/proyects/NoticiasPrincipal.png',
-      altText: 'News App with IONIC',
+      titleEs: 'App de manejo de stock en tiempo real (.NET + Angular + MySql)',
+      titleEn: 'Real-Time Stock Management App (.NET + Angular + MySql)',
+      image: 'assets/img/proyects/Principal.png',
+      altText: 'StockManager',
       filterClass: 'filter-app',
-      demoLink: 'https://marvelapp.com/prototype/2i6hebeg',
-      repoLink: 'https://github.com/abrahamraies/App-de-noticias'
-    },
-    {
-      titleEs: 'App de Peliculas con IONIC',
-      titleEn: 'Movie App with IONIC',
-      image: 'assets/img/proyects/PeliculasPrincipal.png',
-      altText: 'Movie App with IONIC',
-      filterClass: 'filter-app',
-      demoLink: 'https://marvelapp.com/prototype/j8j4i3e',
-      repoLink: 'https://github.com/abrahamraies/peliculasApp'
+      demoLink: 'https://marvelapp.com/prototype/1b6aca74/screen/95445734',
+      repoLink: 'https://github.com/abrahamraies'
     },
     {
       titleEs: 'Alquiler de vehiculos (SpringBoot + Angular + MySql)',
@@ -82,7 +73,25 @@ export class ProyectComponent implements OnInit {
       filterClass: 'filter-web',
       demoLink: 'https://abrahamraies.github.io/Stepper/',
       repoLink: 'https://github.com/abrahamraies/Stepper'
-    }
+    },
+    {
+      titleEs: 'App de Noticias con IONIC',
+      titleEn: 'News App with IONIC',
+      image: 'assets/img/proyects/NoticiasPrincipal.png',
+      altText: 'News App with IONIC',
+      filterClass: 'filter-app',
+      demoLink: 'https://marvelapp.com/prototype/2i6hebeg',
+      repoLink: 'https://github.com/abrahamraies/App-de-noticias'
+    },
+    {
+      titleEs: 'App de Peliculas con IONIC',
+      titleEn: 'Movie App with IONIC',
+      image: 'assets/img/proyects/PeliculasPrincipal.png',
+      altText: 'Movie App with IONIC',
+      filterClass: 'filter-app',
+      demoLink: 'https://marvelapp.com/prototype/j8j4i3e',
+      repoLink: 'https://github.com/abrahamraies/peliculasApp'
+    },
   ];
 
   constructor(private languageService: LanguageService) { }
