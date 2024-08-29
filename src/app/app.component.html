@@ -1,48 +1,43 @@
-<header id="header">
+<header id="header" class="header">
   <div class="d-flex flex-column">
-
-    <div class="profile">
-      <img src="assets/img/Perfil.jpeg" alt="" class="img-fluid rounded-circle">
+    <!-- Perfil -->
+    <div class="profile text-center">
+      <img src="assets/img/Perfil.jpeg" alt="Abraham Raies" class="img-fluid rounded-circle profile-img">
       <h1 class="text-light"><a href="index.html">Abraham Raies</a></h1>
-      <div class="social-links mt-3 text-center">
-        <a href="https://www.facebook.com/abraham.raies.3/" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="https://www.instagram.com/abrahamraies/" target="_blank" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="https://github.com/abrahamraies" target="_blank" class="github"><i class="bx bxl-github"></i></a>
-        <a href="https://www.linkedin.com/in/abraham-raies/" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-        <a *ngIf="currentLanguage === 'es'" href="https://firebasestorage.googleapis.com/v0/b/frontend-portfolio-b48a3.appspot.com/o/CV%20Abraham%20Raies%202024%20(ES).pdf?alt=media&token=6b6ba829-4def-401a-a9b7-ccfd4e8e52ff" target="_blank" class="CV"><i class="bi bi-file-person"></i></a>
-        <a *ngIf="currentLanguage === 'en'" href="https://firebasestorage.googleapis.com/v0/b/frontend-portfolio-b48a3.appspot.com/o/CV%20Abraham%20Raies%20-%20Software%20Developer.pdf?alt=media&token=3e0672e6-5ee8-4f34-8db9-d1989950b330" target="_blank" class="CV"><i class="bi bi-file-person"></i></a>
-        <hr>
+      <div class="social-links mt-3">
+        <a href="https://www.facebook.com/abraham.raies.3/" target="_blank" class="social-link facebook" aria-label="Facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="https://www.instagram.com/abrahamraies/" target="_blank" class="social-link instagram" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://github.com/abrahamraies" target="_blank" class="social-link github" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+        <a href="https://www.linkedin.com/in/abraham-raies/" target="_blank" class="social-link linkedin" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+        <a *ngIf="currentLanguage === 'es'" href="https://firebasestorage.googleapis.com/v0/b/frontend-portfolio-b48a3.appspot.com/o/CV%20Abraham%20Raies%202024%20(ES).pdf?alt=media&token=6b6ba829-4def-401a-a9b7-ccfd4e8e52ff" target="_blank" class="social-link CV" aria-label="CV en Español"><i class="bi bi-file-person"></i></a>
+        <a *ngIf="currentLanguage === 'en'" href="https://firebasestorage.googleapis.com/v0/b/frontend-portfolio-b48a3.appspot.com/o/CV%20Abraham%20Raies%20-%20Software%20Developer.pdf?alt=media&token=3e0672e6-5ee8-4f34-8db9-d1989950b330" target="_blank" class="social-link CV" aria-label="CV en Inglés"><i class="bi bi-file-person"></i></a>
       </div>
+      <hr>
     </div>
 
-    <nav id="navbar" class="nav-menu navbar" >
+    <!-- Navegación -->
+    <nav id="navbar" class="nav-menu">
       <ul *ngIf="currentLanguage === 'es'">
-        <li><a href="#home" (click)="selected('home')" [ngClass]="{'nav-link scrollto':true , 'active':elem1}" ><i class="bx bx-home"></i> <span>Inicio</span></a></li>
-        <li><a href="#about" (click)="selected('about')" [ngClass]="{'nav-link scrollto':true , 'active':elem2}" ><i class="bx bx-user"></i> <span>Sobre mi</span></a></li>
-        <li><a href="#skills" (click)="selected('skills')" [ngClass]="{'nav-link scrollto':true , 'active':elem3}"><i class="bx bx-user"></i> <span>Habilidades</span></a></li>
-        <li><a href="#resume" (click)="selected('resume')" [ngClass]="{'nav-link scrollto':true , 'active':elem4}"><i class="bx bx-file-blank"></i> <span>Resumen</span></a></li>
-        <li><a href="#proyect" (click)="selected('proyect')" [ngClass]="{'nav-link scrollto':true , 'active':elem5}"><i class="bx bx-book-content"></i> <span>Proyectos</span></a></li>
-        <li><a href="#contact" (click)="selected('contact')" [ngClass]="{'nav-link scrollto':true , 'active':elem6}"><i class="bx bx-envelope"></i> <span>Contacto</span></a></li>
+        <li><a href="#home" (click)="selected('home')" [ngClass]="{'nav-link scrollto': true, 'active': elem1}"><i class="bx bx-home"></i> <span>Inicio</span></a></li>
+        <li><a href="#about" (click)="selected('about')" [ngClass]="{'nav-link scrollto': true, 'active': elem2}"><i class="bx bx-user"></i> <span>Sobre mi</span></a></li>
+        <li><a href="#skills" (click)="selected('skills')" [ngClass]="{'nav-link scrollto': true, 'active': elem3}"><i class="bx bx-briefcase"></i> <span>Habilidades</span></a></li>
+        <li><a href="#resume" (click)="selected('resume')" [ngClass]="{'nav-link scrollto': true, 'active': elem4}"><i class="bx bx-file-blank"></i> <span>Resumen</span></a></li>
+        <li><a href="#proyect" (click)="selected('proyect')" [ngClass]="{'nav-link scrollto': true, 'active': elem5}"><i class="bx bx-book-content"></i> <span>Proyectos</span></a></li>
+        <li><a href="#contact" (click)="selected('contact')" [ngClass]="{'nav-link scrollto': true, 'active': elem6}"><i class="bx bx-envelope"></i> <span>Contacto</span></a></li>
       </ul>
       <ul *ngIf="currentLanguage === 'en'">
-        <li><a href="#home" (click)="selected('home')" [ngClass]="{'nav-link scrollto':true , 'active':elem1}" ><i class="bx bx-home"></i> <span>Home</span></a></li>
-        <li><a href="#about" (click)="selected('about')" [ngClass]="{'nav-link scrollto':true , 'active':elem2}" ><i class="bx bx-user"></i> <span>About me</span></a></li>
-        <li><a href="#skills" (click)="selected('skills')" [ngClass]="{'nav-link scrollto':true , 'active':elem3}"><i class="bx bx-user"></i> <span>Skills</span></a></li>
-        <li><a href="#resume" (click)="selected('resume')" [ngClass]="{'nav-link scrollto':true , 'active':elem4}"><i class="bx bx-file-blank"></i> <span>Summary</span></a></li>
-        <li><a href="#proyect" (click)="selected('proyect')" [ngClass]="{'nav-link scrollto':true , 'active':elem5}"><i class="bx bx-book-content"></i> <span>Proyects</span></a></li>
-        <li><a href="#contact" (click)="selected('contact')" [ngClass]="{'nav-link scrollto':true , 'active':elem6}"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+        <li><a href="#home" (click)="selected('home')" [ngClass]="{'nav-link scrollto': true, 'active': elem1}"><i class="bx bx-home"></i> <span>Home</span></a></li>
+        <li><a href="#about" (click)="selected('about')" [ngClass]="{'nav-link scrollto': true, 'active': elem2}"><i class="bx bx-user"></i> <span>About me</span></a></li>
+        <li><a href="#skills" (click)="selected('skills')" [ngClass]="{'nav-link scrollto': true, 'active': elem3}"><i class="bx bx-briefcase"></i> <span>Skills</span></a></li>
+        <li><a href="#resume" (click)="selected('resume')" [ngClass]="{'nav-link scrollto': true, 'active': elem4}"><i class="bx bx-file-blank"></i> <span>Summary</span></a></li>
+        <li><a href="#proyect" (click)="selected('proyect')" [ngClass]="{'nav-link scrollto': true, 'active': elem5}"><i class="bx bx-book-content"></i> <span>Projects</span></a></li>
+        <li><a href="#contact" (click)="selected('contact')" [ngClass]="{'nav-link scrollto': true, 'active': elem6}"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
       </ul>
     </nav>
   </div>
-  <script src="../assets/js/main.js"></script>
+  <button *ngIf="!isRouteExcluded()" (click)="scrollToTop()" class="floating-button">↑</button>
 </header>
-
-
 
 <main id="main">
   <router-outlet></router-outlet>
 </main>
-
-<button *ngIf="!isRouteExcluded()"
-(click)="scrollToTop()"
-class="floating-button">↑</button>
