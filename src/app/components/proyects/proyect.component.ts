@@ -34,7 +34,7 @@ export class ProyectComponent implements OnInit {
       titleEn: 'Car rental (SpringBoot + Angular + MySql)',
       image: 'assets/img/proyects/rentalsVenado.png',
       altText: 'Car rental web site',
-      filterClass: 'filter-web',
+      filterClass: 'filter-app',
       demoLink: 'https://rentals-venado.web.app/',
       repoLink: 'https://github.com/abrahamraies/Proyecto_alquiler_vehiculos'
     },
