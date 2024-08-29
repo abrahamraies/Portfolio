@@ -64,6 +64,24 @@ export class ProyectComponent implements OnInit {
       filterClass: 'filter-web',
       demoLink: 'https://marvelapp.com/prototype/fd51hi6/screen/95440488',
       repoLink: 'https://github.com/abrahamraies/task-list'
+    },
+    {
+      titleEs: 'Maquina de casino para aprender (Angular)',
+      titleEn: 'Slot Machine for learning (Angular)',
+      image: 'assets/img/proyects/FirstCapture.png',
+      altText: 'SlotMachine',
+      filterClass: 'filter-web',
+      demoLink: 'https://marvelapp.com/prototype/7gcci77/screen/95442823',
+      repoLink: 'https://github.com/abrahamraies/slot-machine-app'
+    },
+    {
+      titleEs: 'Como crear un proyecto paso a paso (Angular)',
+      titleEn: 'Stepper of proyects creation (Angular)',
+      image: 'assets/img/proyects/1er picture.png',
+      altText: 'Stepper',
+      filterClass: 'filter-web',
+      demoLink: 'https://abrahamraies.github.io/Stepper/',
+      repoLink: 'https://github.com/abrahamraies/Stepper'
     }
   ];
 
