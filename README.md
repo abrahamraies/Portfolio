@@ -1,88 +1,87 @@
-# Portafolio de Abraham Raies
+# Abraham Raies Portfolio
 
-Este es un portafolio personal desarrollado con Angular 18. Está diseñado para mostrar mis habilidades, proyectos y experiencia profesional en un formato atractivo y fácil de navegar.
+This is a personal portfolio developed with Angular 18. It is designed to showcase my skills, projects, and professional experience in an attractive and easy-to-navigate format.
 
-## Tecnologías Utilizadas
+## Technologies Used
 
-- **Angular 18**: Framework principal para el desarrollo de la aplicación.
-- **HTML/CSS**: Para el diseño y la maquetación del sitio.
-- **TypeScript**: Lenguaje de programación utilizado en el desarrollo.
-- **Bootstrap**: Framework de CSS para un diseño responsivo.
-- **RxJS**: Para manejar la programación reactiva y el flujo de datos.
-- **Angular Router**: Para la navegación entre secciones del portafolio.
+- **Angular 18**: Main framework for application development.
+- **HTML/CSS**: For the design and layout of the site.
+- **TypeScript**: Programming language used in the development.
+- **Bootstrap**: CSS framework for responsive design.
+- **RxJS**: For handling reactive programming and data flow.
+- **Angular Router**: For navigating between sections of the portfolio.
 
-## Instalación
+## Installation
 
-Para clonar y ejecutar este proyecto localmente, sigue estos pasos:
+To clone and run this project locally, follow these steps:
 
-1. **Clona el repositorio:**
-
-    ```bash
-    git clone https://github.com/tu_usuario/tu_repositorio.git
-    ```
-
-2. **Navega al directorio del proyecto:**
+1. **Clone the repository:**
 
     ```bash
-    cd tu_repositorio
+    git clone https://github.com/your_username/your_repository.git
     ```
 
-3. **Instala las dependencias:**
+2. **Navigate to the project directory:**
+
+    ```bash
+    cd your_repository
+    ```
+
+3. **Install the dependencies:**
 
     ```bash
     npm install
     ```
 
-4. **Inicia el servidor de desarrollo:**
+4. **Start the development server:**
 
     ```bash
     ng serve
     ```
 
-5. **Abre tu navegador y visita:**
+5. **Open your browser and visit:**
 
     ```
     http://localhost:4200
     ```
 
-## Estructura del Proyecto
+## Project Structure
 
-- **src/app/components**: Contiene los componentes principales de la aplicación.
-- **src/app/services**: Servicios para manejar la lógica de negocio y las peticiones HTTP.
-- **src/assets**: Archivos estáticos como imágenes y estilos personalizados.
-- **src/environments**: Configuraciones de entorno para desarrollo y producción.
+- **src/app/components**: Contains the main components of the application.
+- **src/app/services**: Services for handling business logic and HTTP requests.
+- **src/assets**: Static files such as images and custom styles.
+- **src/environments**: Environment configurations for development and production.
 
-## Contribuciones
+## Contributions
 
-Si deseas contribuir a este proyecto, por favor sigue estos pasos:
+If you want to contribute to this project, please follow these steps:
 
-1. **Fork el repositorio**.
-2. **Crea una nueva rama** para tus cambios:
-
-    ```bash
-    git checkout -b mi-nueva-funcionalidad
-    ```
-
-3. **Haz tus cambios** y asegúrate de que el proyecto sigue funcionando correctamente.
-4. **Commit tus cambios**:
+1. **Fork the repository**.
+2. **Create a new branch** for your changes:
 
     ```bash
-    git commit -am 'Añadir nueva funcionalidad'
+    git checkout -b my-new-feature
     ```
 
-5. **Push a tu fork**:
+3. **Make your changes** and ensure the project continues to function correctly.
+4. **Commit your changes**:
 
     ```bash
-    git push origin mi-nueva-funcionalidad
+    git commit -am 'Add new feature'
     ```
 
-6. **Crea un Pull Request** en GitHub.
+5. **Push to your fork**:
 
-## Licencia
+    ```bash
+    git push origin my-new-feature
+    ```
 
-Este proyecto está licenciado bajo la [Licencia MIT]([LICENSE](https://opensource.org/license/MIT)).
+6. **Create a Pull Request** on GitHub.
 
-## Contacto
+## License
 
-Si tienes alguna pregunta, no dudes en contactarme a través de [mi correo electrónico](mailto:abrahamraies@gmail.com) o [LinkedIn](https://www.linkedin.com/in/abraham-raies).
+This project is licensed under the [MIT License](https://opensource.org/license/MIT).
 
+## Contact
+
+If you have any questions, feel free to contact me via [email](mailto:abrahamraies@gmail.com) or [LinkedIn](https://www.linkedin.com/in/abraham-raies).
