@@ -1,27 +1,88 @@
-# Portfolio
+# Portafolio de Abraham Raies
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
+Este es un portafolio personal desarrollado con Angular 18. Está diseñado para mostrar mis habilidades, proyectos y experiencia profesional en un formato atractivo y fácil de navegar.
 
-## Development server
+## Tecnologías Utilizadas
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Angular 18**: Framework principal para el desarrollo de la aplicación.
+- **HTML/CSS**: Para el diseño y la maquetación del sitio.
+- **TypeScript**: Lenguaje de programación utilizado en el desarrollo.
+- **Bootstrap**: Framework de CSS para un diseño responsivo.
+- **RxJS**: Para manejar la programación reactiva y el flujo de datos.
+- **Angular Router**: Para la navegación entre secciones del portafolio.
 
-## Code scaffolding
+## Instalación
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para clonar y ejecutar este proyecto localmente, sigue estos pasos:
 
-## Build
+1. **Clona el repositorio:**
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+    ```bash
+    git clone https://github.com/tu_usuario/tu_repositorio.git
+    ```
 
-## Running unit tests
+2. **Navega al directorio del proyecto:**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    ```bash
+    cd tu_repositorio
+    ```
 
-## Running end-to-end tests
+3. **Instala las dependencias:**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+    ```bash
+    npm install
+    ```
 
-## Further help
+4. **Inicia el servidor de desarrollo:**
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+    ```bash
+    ng serve
+    ```
+
+5. **Abre tu navegador y visita:**
+
+    ```
+    http://localhost:4200
+    ```
+
+## Estructura del Proyecto
+
+- **src/app/components**: Contiene los componentes principales de la aplicación.
+- **src/app/services**: Servicios para manejar la lógica de negocio y las peticiones HTTP.
+- **src/assets**: Archivos estáticos como imágenes y estilos personalizados.
+- **src/environments**: Configuraciones de entorno para desarrollo y producción.
+
+## Contribuciones
+
+Si deseas contribuir a este proyecto, por favor sigue estos pasos:
+
+1. **Fork el repositorio**.
+2. **Crea una nueva rama** para tus cambios:
+
+    ```bash
+    git checkout -b mi-nueva-funcionalidad
+    ```
+
+3. **Haz tus cambios** y asegúrate de que el proyecto sigue funcionando correctamente.
+4. **Commit tus cambios**:
+
+    ```bash
+    git commit -am 'Añadir nueva funcionalidad'
+    ```
+
+5. **Push a tu fork**:
+
+    ```bash
+    git push origin mi-nueva-funcionalidad
+    ```
+
+6. **Crea un Pull Request** en GitHub.
+
+## Licencia
+
+Este proyecto está licenciado bajo la [Licencia MIT]([LICENSE](https://opensource.org/license/MIT)).
+
+## Contacto
+
+Si tienes alguna pregunta, no dudes en contactarme a través de [mi correo electrónico](mailto:abrahamraies@gmail.com) o [LinkedIn](https://www.linkedin.com/in/abraham-raies).
+
