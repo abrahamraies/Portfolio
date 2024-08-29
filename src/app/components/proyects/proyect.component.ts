@@ -75,8 +75,8 @@ export class ProyectComponent implements OnInit {
       repoLink: 'https://github.com/abrahamraies/Stepper'
     },
     {
-      titleEs: 'App de Noticias con IONIC',
-      titleEn: 'News App with IONIC',
+      titleEs: 'App de Noticias (IONIC)',
+      titleEn: 'News App (IONIC)',
       image: 'assets/img/proyects/NoticiasPrincipal.png',
       altText: 'News App with IONIC',
       filterClass: 'filter-app',
@@ -84,8 +84,8 @@ export class ProyectComponent implements OnInit {
       repoLink: 'https://github.com/abrahamraies/App-de-noticias'
     },
     {
-      titleEs: 'App de Peliculas con IONIC',
-      titleEn: 'Movie App with IONIC',
+      titleEs: 'App de Peliculas (IONIC)',
+      titleEn: 'Movie App (IONIC)',
       image: 'assets/img/proyects/PeliculasPrincipal.png',
       altText: 'Movie App with IONIC',
       filterClass: 'filter-app',
