@@ -80,7 +80,7 @@ Si deseas contribuir a este proyecto, por favor sigue estos pasos:
 
 ## Licencia
 
-Este proyecto está licenciado bajo la [Licencia MIT](LICENSE).
+Este proyecto está licenciado bajo la [Licencia MIT]([LICENSE](https://opensource.org/license/MIT)).
 
 ## Contacto
 
