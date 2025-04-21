@@ -1,0 +1,92 @@
+<section *ngIf="isSpanish" class="what-i-do-container">
+  <h1>¿Querés un sitio moderno, rápido y profesional?</h1>
+  <p class="subheading">
+    Transformo tus ideas en soluciones digitales que atraen clientes y generan
+    resultados.
+  </p>
+
+  <h2>¿Qué puedo hacer por vos?</h2>
+  <ul class="services">
+    <li>✔️ Landing pages que convierten visitas en clientes.</li>
+    <li>✔️ Sitios web responsive, optimizados para celulares.</li>
+    <li>✔️ Integración con APIs, CRMs o pagos online.</li>
+    <li>✔️ Paneles de administración personalizados.</li>
+    <li>✔️ Optimización SEO y velocidad de carga.</li>
+  </ul>
+
+  <h2>Algunos resultados</h2>
+  <div class="projects">
+    <div class="project">
+      <h3>🚗 Cotizador de Seguros</h3>
+      <p>
+        Permite a los usuarios cotizar y pagar online. Aumentó el alcance en un
+        20%.
+      </p>
+    </div>
+    <div class="project">
+      <h3>🍽️ App de Recetas</h3>
+      <p>
+        Registro, favoritos, buscador. Hecha para que cualquier foodie la
+        disfrute.
+      </p>
+    </div>
+  </div>
+
+  <h2>¿Cómo trabajo?</h2>
+  <ol class="steps">
+    <li><strong>1.</strong> Me contás tu idea.</li>
+    <li><strong>2.</strong> Te propongo una solución accesible.</li>
+    <li><strong>3.</strong> Desarrollo con tu feedback.</li>
+    <li><strong>4.</strong> Entrego un producto real y usable.</li>
+  </ol>
+
+  <div class="cta">
+    <h2>¿Listo para llevar tu idea al siguiente nivel?</h2>
+    <button (click)="goToContact()" class="cta-btn">Contactame</button>
+  </div>
+</section>
+
+<!-- INGLÉS -->
+<section *ngIf="!isSpanish" class="what-i-do-container">
+  <h1>Do you want a modern, fast and professional website?</h1>
+  <p class="subheading">
+    I turn your ideas into digital solutions that attract clients and generate
+    results.
+  </p>
+
+  <h2>What can I do for you?</h2>
+  <ul class="services">
+    <li>✔️ Landing pages that turn visitors into customers.</li>
+    <li>✔️ Responsive websites, optimized for mobile.</li>
+    <li>✔️ Integration with APIs, CRMs or payment platforms.</li>
+    <li>✔️ Custom admin dashboards.</li>
+    <li>✔️ SEO and performance optimization.</li>
+  </ul>
+
+  <h2>Some results</h2>
+  <div class="projects">
+    <div class="project">
+      <h3>🚗 Insurance Quoting Tool</h3>
+      <p>Let users quote and pay online. Increased client reach by 20%.</p>
+    </div>
+    <div class="project">
+      <h3>🍽️ Recipes App</h3>
+      <p>
+        Register, save favorites, search. Designed for every foodie to enjoy.
+      </p>
+    </div>
+  </div>
+
+  <h2>How do I work?</h2>
+  <ol class="steps">
+    <li><strong>1.</strong> You tell me your idea.</li>
+    <li><strong>2.</strong> I propose a practical solution.</li>
+    <li><strong>3.</strong> I develop it with your feedback.</li>
+    <li><strong>4.</strong> You get a usable, real product.</li>
+  </ol>
+
+  <div class="cta">
+    <h2>Ready to take your idea to the next level?</h2>
+    <button (click)="goToContact()" class="cta-btn">Contact me</button>
+  </div>
+</section>

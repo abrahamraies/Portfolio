@@ -1,205 +1,107 @@
 <section id="resume" class="resume">
   <div class="container">
-
-    <div class="section-title" *ngIf="currentLanguage === 'es'">
-      <h2>Resumen</h2>
+    <div class="section-title">
+      <h2>{{ content.title }}</h2>
       <p>
-        Desde el 2018 al 2020, cursé la carrera de Ingeniería en Sistemas de Información en la Universidad Tecnológica Nacional de Rosario. Durante la pandemia, regresé a mi ciudad natal, Venado Tuerto, donde elegí inscribirme en el programa de Técnico en Programación de la misma institución. Terminé este programa con distinción en noviembre de 2022.
-        <br>
-        Mi educación me ha dotado de una base sólida en sistemas de información y programación. Para mejorar aún más mis habilidades y mantenerme al tanto de los desarrollos de la industria, participo activamente en cursos adicionales y oportunidades de desarrollo profesional. Actualmente, también me dedico a mejorar mi dominio del inglés, que considero esencial para mi crecimiento y éxito continuos en la industria tecnológica global.</p>
-    </div>
-
-    <div class="section-title" *ngIf="currentLanguage === 'en'">
-      <h2>Summary</h2>
-      <p>
-        From 2018 to 2020, I studied Information Systems Engineering at the National Technological University of Rosario. During the pandemic, I returned to my hometown, Venado Tuerto, where I chose to enroll in the Programming Technician program at the same institution. I completed this program with distinction in November 2022.
-        <br>
-        <br>
-        My education has provided me with a solid foundation in information systems and programming. To further enhance my skills and keep abreast of industry developments, I actively participate in additional courses and professional development opportunities. Currently, I am also dedicated to improving my English proficiency, which I consider essential to my continued growth and success in the global technology industry.
+        {{ content.description }}
       </p>
     </div>
 
-    <div class="row" *ngIf="currentLanguage === 'es'">
+    <div class="row">
       <!-- Experiencia profesional -->
       <div class="col-lg-12 section-bg" data-aos="fade-up">
-        <h3 class="resume-title" style="text-align: center;">Experiencia profesional</h3>
-        <div class="resume-item">
-          <h4>Desarrollador Backend</h4>
-          <h5>2021 - 2024</h5>
-          <p><em>Cooperacion Seguros</em></p>
+        <h3 class="resume-title" style="text-align: center">
+          {{ content.experienceTitle }}
+        </h3>
+        <div *ngFor="let job of content.experience" class="resume-item">
+          <h4>{{ job.position }}</h4>
+          <h5>{{ job.date }}</h5>
+          <p>
+            <em>{{ job.company }}</em>
+          </p>
           <ul>
-            <li><u>Colaboración y Liderazgo:</u> Colaboré con equipos multifuncionales para priorizar características utilizando <strong>Jira</strong> y <strong>Confluence</strong>, demostrando fuertes habilidades de trabajo en equipo, comunicación y liderazgo.</li>
-            <li><u>Desarrollo de APIs:</u> Lideré el desarrollo de APIs en <strong>.NET Core</strong>, integrándome con <strong>SAP CPI</strong>, lo que mejoró la interoperabilidad del sistema en un 30%.</li>
-            <li><u>Calidad del Software:</u> Desarrollé y ejecuté <strong>pruebas unitarias</strong> y de sistema para asegurar la alta calidad del software.</li>
-            <li><u>Comunicación de Software:</u> Construí y mantuve <strong>APIs REST</strong> y <strong>SOAP</strong> para una comunicación fluida del software.</li>
-            <li><u>Optimización de Bases de Datos:</u> Optimizé bases de datos <strong>SQL Server</strong>, mejorando el rendimiento de las consultas en un 25%.</li>
-            <li><u>Gestión de Mensajería:</u> Desarrollé servicios con <strong>RabbitMQ</strong> para una eficiente gestión de colas de mensajes.</li>
-            <li><u>Innovación y Eficiencia:</u> Integré servicios de <strong>Azure Open AI</strong> y utilicé <strong>GitHub Copilot</strong> para mejorar la eficiencia en la codificación.</li>
-          </ul>
-        </div>
-        <div class="resume-item">
-          <h4>Desarrollador Full Stack</h4>
-          <h5>2023 - Actualidad</h5>
-          <p><em>FREELANCE</em></p>
-          <ul>
-            <li>Diseñé y desarrollé aplicaciones web utilizando tecnologías de vanguardia como <strong>Angular</strong>, <strong>.NET</strong>, <strong>Docker</strong>, y <strong>Digital Ocean</strong>.</li>
-            <li>Implementé soluciones de software basadas en las necesidades del cliente, logrando una tasa de satisfacción del 90%.</li>
-            <li>Creé y mantuve bases de datos eficientes y escalables utilizando SQL.</li>
-            <li>Creé una aplicación de gestión de stock en tiempo real para una carnicería, empleando <strong>Angular</strong>, <strong>.NET Core 6/8</strong>, y <strong>MySql</strong>, lo que resultó en una mejora del 15% en la precisión del inventario y una reducción de las discrepancias de stock.</li>
-            <li>Desarrollé un prototipo de aplicación de alquiler de coches utilizando <strong>Angular</strong>, <strong>SpringBoot</strong>, y <strong>MySQL</strong>, que se vendió con éxito a una empresa local, contribuyendo a un aumento del 25% en la eficiencia del servicio de alquiler.</li>
+            <li *ngFor="let task of job.tasks" [innerHTML]="task"></li>
           </ul>
         </div>
       </div>
 
       <!-- Educación -->
       <div class="col-lg-12" data-aos="fade-up">
-        <h3 class="resume-title" style="text-align: center;">Educacion</h3>
-        <div class="resume-item">
-          <h4>TECNICATURA EN PROGRAMACIÓN</h4>
-          <h5>2021 - 2022 </h5>
-          <p><em>UNIVERSIDAD TECNOLÓGICA NACIONAL</em></p>
-          <p>Durante la carrera amplié mis habilidades centrándome en Spring Boot y Angular, mejorando aún más mi experiencia con los conceptos básicos de GitHub y Docker. A lo largo de mis estudios, apliqué estas habilidades desarrollando una aplicación web para el alquiler de vehículos, lo que me permitió profundizar mis conocimientos en Spring Boot, Angular, MySQL, Docker, Git y VSCode. Estas experiencias fueron cruciales para mi graduación, equipándome con una sólida experiencia en programación web, bases de datos y diseño de software.</p>
-        </div>
-        <div class="resume-item">
-          <h4>INGENIERÍA EN SISTEMAS</h4>
-          <h5>2018 - 2020</h5>
-          <p><em>UNIVERSIDAD TECNOLÓGICA NACIONAL</em></p>
-          <p>Cursé dos años de Ingeniería en Sistemas, obteniendo una sólida base en conceptos fundamentales y prácticas de desarrollo de software. Aunque decidí interrumpir mis estudios, la experiencia proporcionó una base valiosa que continúa influyendo positivamente en mi enfoque hacia los desafíos tecnológicos.</p>
+        <h3 class="resume-title" style="text-align: center">{{ content.educationTitle }}</h3>
+        <div *ngFor="let edu of content.education" class="resume-item">
+          <h4>{{ edu.title }}</h4>
+          <h5>{{ edu.date }}</h5>
+          <p><em>{{ edu.school }}</em></p>
+          <p>{{ edu.description }}</p>
         </div>
       </div>
 
       <!-- Cursos -->
       <div class="col-lg-12 section-bg" data-aos="fade-up">
-        <h3 class="resume-title text-center" id="cursos">Cursos</h3>
-          <div class="resume-item pb-0">
-            <a href="https://learn.microsoft.com/en-us/users/abrahamraies-4425/achievements?tab=tab-learning-paths" target="_blank"><h4 style="color: #2980b9; font-size: 1.5em; margin-top: 20px; border-left: 4px solid #3498db; padding-left: 10px;">Microsoft</h4></a>
-              <ul style="list-style-type: none; padding-left: 20px;">
-                  <li><i class="bi bi-check-circle-fill"></i> Fundamentos de C# con Microsoft | Agosto 2024</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Acelera la Productividad del Desarrollador con GitHub y Azure para Desarrolladores | Junio 2024</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Fundamentos de GitHub Copilot - Entiende al Programador Asistente de IA | Junio 2024</li>
-              </ul>
+        <h3 class="resume-title text-center" id="cursos">{{ content.coursesTitle }}</h3>
+        <div class="resume-item pb-0">
+          <ng-container *ngFor="let category of content.courses| keyvalue">
+            <a
+              [routerLink]="getCourseLink(category.key)"
+              target="_blank"
+              *ngIf="isInternalLink(category.key); else externalLink"
+            >
+              <h4
+                style="
+                  color: #2980b9;
+                  font-size: 1.5em;
+                  margin-top: 20px;
+                  border-left: 4px solid #3498db;
+                  padding-left: 10px;
+                "
+              >
+                {{ category.key }}
+              </h4>
+            </a>
 
-              <a routerLink="/certificates/google"><h4 style="color: #2980b9; font-size: 1.5em; margin-top: 20px; border-left: 4px solid #3498db; padding-left: 10px;">Google</h4></a>
-              <ul style="list-style-type: none; padding-left: 20px;">
-                  <li><i class="bi bi-check-circle-fill"></i> Google Cloud Essentials | Diciembre 2022</li>
-              </ul>
+            <ng-template #externalLink>
+              <a
+                [href]="getExternalLink(category.key)"
+                target="_blank"
+              >
+                <h4
+                  style="
+                    color: #2980b9;
+                    font-size: 1.5em;
+                    margin-top: 20px;
+                    border-left: 4px solid #3498db;
+                    padding-left: 10px;
+                  "
+                >
+                  {{ category.key }}
+                </h4>
+              </a>
+            </ng-template>
 
-              <a routerLink="/certificates/udemy"><h4 style="color: #2980b9; font-size: 1.5em; margin-top: 20px; border-left: 4px solid #3498db; padding-left: 10px;">Udemy</h4></a>
-              <ul style="list-style-type: none; padding-left: 20px;">
-                  <li><i class="bi bi-check-circle-fill"></i> Microservicios con ASP.NET 6 y RabbitMQ | Septiembre 2023</li>
-                  <li><i class="bi bi-check-circle-fill"></i> C# + SQL Server | Septiembre 2022</li>
-                  <li><i class="bi bi-check-circle-fill"></i> SAP CPI | Junio 2022</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Solid & Clean Code | Febrero 2022</li>
-                  <li><i class="bi bi-check-circle-fill"></i> .NET Core | Febrero 2022</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Azure DevOps | Febrero 2022</li>
-              </ul>
-
-              <a routerLink="/certificates/others"><h4 style="color: #2980b9; font-size: 1.5em; margin-top: 20px; border-left: 4px solid #3498db; padding-left: 10px;">Otros</h4></a>
-              <ul style="list-style-type: none; padding-left: 20px;">
-                  <li><i class="bi bi-check-circle-fill"></i> Aplicaciones Inteligentes con Azure Open AI | Febrero 2024</li>
-              </ul>
-          </div>
+            <!-- Lista de cursos -->
+            <ul style="list-style-type: none; padding-left: 20px">
+              <li *ngFor="let course of category.value">
+                <i class="bi bi-check-circle-fill"></i> {{ course }}
+              </li>
+            </ul>
+          </ng-container>
+        </div>
       </div>
 
       <!-- Certificados y Test's -->
       <div class="col-lg-12" data-aos="fade-up">
-        <h3 class="resume-title" style="text-align: center;">Certificados</h3>
-        <a routerLink="/certificados" style="text-align: center;"><h5>MICROSOFT - UDEMY - GOOGLE - OPEN ENGLISH</h5></a>
-        <h4 class="resume-title" style="text-align: center;">Test's</h4>
-        <a href="https://firebasestorage.googleapis.com/v0/b/frontend-portfolio-b48a3.appspot.com/o/Test_Competencias.pdf?alt=media&token=72f618e4-fc5a-42f5-a45c-d1fa966259e7" target="_blank" style="text-align: center;"><h5>Test de competencias</h5></a>
+        <h3 class="resume-title" style="text-align: center">{{content.certificatesTitle}}</h3>
+        <a routerLink="/certificados" style="text-align: center"
+          ><h5>{{content.certificatesSubtitle}}</h5></a
+        >
+        <h4 class="resume-title" style="text-align: center">{{content.testsTitle}}</h4>
+        <a
+          href="https://firebasestorage.googleapis.com/v0/b/frontend-portfolio-b48a3.appspot.com/o/Test_Competencias.pdf?alt=media&token=72f618e4-fc5a-42f5-a45c-d1fa966259e7"
+          target="_blank"
+          style="text-align: center"
+          ><h5>{{content.testCompetency}}</h5></a
+        >
       </div>
     </div>
-
-    <div class="row" *ngIf="currentLanguage === 'en'">
-      <!-- Professional Experience -->
-      <div class="col-lg-12 section-bg" data-aos="fade-up">
-        <h3 class="resume-title" style="text-align: center;">Professional Experience</h3>
-        <div class="resume-item">
-          <h4>Backend Developer</h4>
-          <h5>2021 - 2024</h5>
-          <p><em>Cooperacion Seguros</em></p>
-          <ul>
-            <li><u>Collaboration and Leadership:</u> Collaborated with cross-functional teams to prioritize features using <strong>Jira</strong> and <strong>Confluence</strong>, demonstrating strong teamwork, communication, and leadership skills.</li>
-            <li><u>API Development:</u> Led API development in <strong>.NET Core</strong>, integrating with <strong>SAP CPI</strong>, which improved system interoperability by 30%.</li>
-            <li><u>Software Quality:</u> Developed and executed <strong>unit tests</strong> and system testing to ensure high software quality.</li>
-            <li><u>Software Communication:</u> Built and maintained <strong>REST</strong> and <strong>SOAP APIs</strong> for seamless software communication.</li>
-            <li><u>Database Optimization:</u> Optimized <strong>SQL Server</strong> databases, improving query performance by 25%.</li>
-            <li><u>Messaging Management:</u> Developed services with <strong>RabbitMQ</strong> for efficient message queue management.</li>
-            <li><u>Innovation and Efficiency:</u> Integrated <strong>Azure Open AI</strong> services and utilized <strong>GitHub Copilot</strong> to enhance coding efficiency.</li>
-          </ul>
-        </div>
-        <div class="resume-item">
-          <h4>Full Stack Developer</h4>
-          <h5>2023 - Currently</h5>
-          <p><em>FREELANCE</em></p>
-          <ul>
-            <li>Designed and developed web applications using cutting-edge technologies such as <strong>Angular</strong>, <strong>.NET</strong>, <strong>Docker</strong>, <strong>Digital Ocean</strong>.</li>
-            <li>Implemented software solutions based on customer needs, achieving a customer satisfaction rate of 90%.</li>
-            <li>Created and maintained efficient and scalable databases using SQL.</li>
-            <li>Created a real-time stock management application for a butcher's shop, employing <strong>Angular</strong>, <strong>.NET Core 6/8</strong>, and <strong>MySql</strong>, leading to a 15% improvement in inventory accuracy and reduced stock discrepancies.</li>
-            <li>Developed a prototype car rental application using <strong>Angular</strong>, <strong>SpringBoot</strong>, and <strong>MySQL</strong>, successfully sold to a local company, contributing to a 25% increase in rental service efficiency.</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- Education -->
-      <div class="col-lg-12" data-aos="fade-up">
-        <h3 class="resume-title" style="text-align: center;">Education</h3>
-        <div class="resume-item">
-          <h4>PROGRAMMING TECHNICIAN</h4>
-          <h5>2021 - 2022 </h5>
-          <p><em>National Technological University</em></p>
-          <p>During my degree I expanded my skills by focusing on Spring Boot and Angular, further improving my experience with the basics of GitHub and Docker. Throughout my studies, I applied these skills by developing a web application for car rental, which allowed me to deepen my knowledge of Spring Boot, Angular, MySQL, Docker, Git, and VSCode. These experiences were crucial to my graduation, equipping me with a strong background in web programming, databases, and software design.</p>
-        </div>
-        <div class="resume-item">
-          <h4>SYSTEMS ENGINEERING</h4>
-          <h5>2018 - 2020</h5>
-          <p><em>National Technological University</em></p>
-          <p>I completed two years of Systems Engineering, obtaining a solid foundation in fundamental concepts and software development practices. Although I decided to interrupt my studies, the experience provided a valuable foundation that continues to positively influence my approach to technological challenges.</p>
-        </div>
-      </div>
-
-      <!-- Courses -->
-      <div class="col-lg-12 section-bg" data-aos="fade-up">
-        <h3 class="resume-title text-center">Courses</h3>
-        <div class="resume-item pb-0">
-          <a href="https://learn.microsoft.com/en-us/users/abrahamraies-4425/achievements?tab=tab-learning-paths" target="_blank"><h4 style="color: #2980b9; font-size: 1.5em; margin-top: 20px; border-left: 4px solid #3498db; padding-left: 10px;">Microsoft</h4></a>
-            <ul style="list-style-type: none; padding-left: 20px;">
-                <li><i class="bi bi-check-circle-fill"></i> Foundational C# with Microsoft | August 2024</li>
-                <li><i class="bi bi-check-circle-fill"></i> Accelerate Developer Productivity with GitHub and Azure for Developers | June 2024</li>
-                <li><i class="bi bi-check-circle-fill"></i> GitHub Copilot Fundamentals - Understand the AI pair programmer | June 2024</li>
-            </ul>
-
-            <a routerLink="/certificates/google"><h4 style="color: #2980b9; font-size: 1.5em; margin-top: 20px; border-left: 4px solid #3498db; padding-left: 10px;">Google</h4></a>
-            <ul style="list-style-type: none; padding-left: 20px;">
-                <li><i class="bi bi-check-circle-fill"></i> Google Cloud Essentials | December 2022</li>
-            </ul>
-
-            <a routerLink="/certificates/udemy"><h4 style="color: #2980b9; font-size: 1.5em; margin-top: 20px; border-left: 4px solid #3498db; padding-left: 10px;">Udemy</h4></a>
-            <ul style="list-style-type: none; padding-left: 20px;">
-                <li><i class="bi bi-check-circle-fill"></i> Microservices with ASP.NET 6 and RabbitMQ | September 2023</li>
-                <li><i class="bi bi-check-circle-fill"></i> C# + SQL Server | September 2022</li>
-                <li><i class="bi bi-check-circle-fill"></i> SAP CPI | June 2022</li>
-                <li><i class="bi bi-check-circle-fill"></i> Solid & Clean Code | February 2022</li>
-                <li><i class="bi bi-check-circle-fill"></i> .NET Core | February 2022</li>
-                <li><i class="bi bi-check-circle-fill"></i> Azure DevOps | February 2022</li>
-            </ul>
-
-            <a routerLink="/certificates/others"><h4 style="color: #2980b9; font-size: 1.5em; margin-top: 20px; border-left: 4px solid #3498db; padding-left: 10px;">Others</h4></a>
-            <ul style="list-style-type: none; padding-left: 20px;">
-                <li><i class="bi bi-check-circle-fill"></i> Intelligent Apps with Azure Open AI | February 2024</li>
-            </ul>
-        </div>
-      </div>
-
-      <!-- Certificates and Tests -->
-      <div class="col-lg-12" data-aos="fade-up">
-        <h3 class="resume-title" style="text-align: center;">Certificates</h3>
-        <a routerLink="/certificates" style="text-align: center;"><h5>MICROSOFT - UDEMY - GOOGLE - OPEN ENGLISH</h5></a>
-        <h4 class="resume-title" style="text-align: center;">Tests</h4>
-        <a href="https://firebasestorage.googleapis.com/v0/b/frontend-portfolio-b48a3.appspot.com/o/Test_Competencias.pdf?alt=media&token=72f618e4-fc5a-42f5-a45c-d1fa966259e7" target="_blank" style="text-align: center;"><h5>Competencies Test</h5></a>
-      </div>
-    </div>
-
   </div>
 </section>

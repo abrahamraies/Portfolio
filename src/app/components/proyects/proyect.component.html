@@ -21,7 +21,7 @@
         [ngClass]="project.filterClass"
         class="col-lg-4 col-md-6 proyect-item">
         <div class="proyect-wrap">
-          <p>{{ currentLanguage === 'es' ? project.titleEs : project.titleEn }}</p>
+          <p [innerHTML]="(currentLanguage === 'es' ? project.titleEs : project.titleEn).replace(' (', '<br>(')"></p>
           <img [src]="project.image" class="img-fluid" [alt]="project.altText">
           <div class="proyect-links">
             <a [href]="project.demoLink" target="_blank" data-gallery="proyectGallery" class="proyect-lightbox" [title]="project.titleEn"><i class="bx bx-plus"></i></a>

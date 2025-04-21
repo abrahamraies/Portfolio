@@ -1,8 +1,9 @@
 <section id="about" class="about">
   <div class="container">
     <div class="container-idiom">
-      <button (click)="changeLanguage()">{{Idiom}}</button>
+      <button (click)="changeLanguage()" aria-label="Change language">{{languageToggleLabel}}</button>
     </div>
+    <button  class="projects-btn" (click)="goToProjects()">{{whatICanDoForYou}}</button>
 
     <div class="section-title">
       <h2>{{ currentLanguage === 'es' ? 'Sobre mí' : 'About me' }}</h2>

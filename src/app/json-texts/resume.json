@@ -1,0 +1,150 @@
+{
+  "es": {
+    "title": "Resumen",
+    "description": "Soy Técnico en Programación con formación en Ingeniería en Sistemas de Información. En 2018 inicié mis estudios en la Universidad Tecnológica Nacional de Rosario, y continué formándome como Técnico en Programación, especializándome en tecnologías como .NET, Angular, Docker y SQL. Obtuve mi título con distinción en noviembre de 2022.\n\nA lo largo de mi carrera, adquirí experiencia tanto en proyectos personales como profesionales, destacando mi capacidad de liderazgo y trabajo en equipo. Actualmente, continúo ampliando mis conocimientos a través de cursos especializados, con un enfoque particular en el desarrollo de software y la mejora de mi dominio del inglés, un aspecto clave para mi crecimiento en el ámbito global de la tecnología.",
+    "experienceTitle": "Experiencia profesional",
+    "experience": [
+      {
+        "position": "Desarrollador Backend",
+        "date": "2021 - 2024",
+        "company": "Cooperacion Seguros",
+        "tasks": [
+          "<u>Colaboración y Liderazgo:</u> Colaboré con equipos multifuncionales para priorizar características utilizando <strong>Jira</strong> y <strong>Confluence</strong>, demostrando fuertes habilidades de trabajo en equipo, comunicación y liderazgo.",
+          "<u>Desarrollo de APIs:</u> Lideré el desarrollo de APIs en <strong>.NET Core</strong>, integrándome con <strong>SAP CPI</strong>, lo que mejoró la interoperabilidad del sistema en un 30%.",
+          "<u>Calidad del Software:</u> Desarrollé y ejecuté <strong>pruebas unitarias</strong> y de sistema para asegurar la alta calidad del software.",
+          "<u>Comunicación de Software:</u> Construí y mantuve <strong>APIs REST</strong> y <strong>SOAP</strong> para una comunicación fluida del software.",
+          "<u>Optimización de Bases de Datos:</u> Optimizé bases de datos <strong>SQL Server</strong>, mejorando el rendimiento de las consultas en un 25%.",
+          "<u>Gestión de Mensajería:</u> Desarrollé servicios con <strong>RabbitMQ</strong> para una eficiente gestión de colas de mensajes.",
+          "<u>Innovación y Eficiencia:</u> Integré servicios de <strong>Azure Open AI</strong> y utilicé <strong>GitHub Copilot</strong> para mejorar la eficiencia en la codificación."
+        ]
+      },
+      {
+        "position": "Desarrollador Full Stack",
+        "date": "2023 - Actualidad",
+        "company": "FREELANCE",
+        "tasks": [
+          "Diseñé y desarrollé aplicaciones web utilizando tecnologías de vanguardia como <strong>Angular</strong>, <strong>.NET</strong>, <strong>Docker</strong>, y <strong>Digital Ocean</strong>.",
+          "Implementé soluciones de software basadas en las necesidades del cliente, logrando una tasa de satisfacción del 90%.",
+          "Creé y mantuve bases de datos eficientes y escalables utilizando SQL.",
+          "Creé una aplicación de gestión de stock en tiempo real para una carnicería, empleando <strong>Angular</strong>, <strong>.NET Core 6/8</strong>, y <strong>MySql</strong>, lo que resultó en una mejora del 15% en la precisión del inventario y una reducción de las discrepancias de stock.",
+          "Desarrollé un prototipo de aplicación de alquiler de coches utilizando <strong>Angular</strong>, <strong>SpringBoot</strong>, y <strong>MySQL</strong>, que se vendió con éxito a una empresa local, contribuyendo a un aumento del 25% en la eficiencia del servicio de alquiler."
+        ]
+      }
+    ],
+    "educationTitle": "Educación",
+    "education": [
+      {
+        "title": "TECNICATURA EN PROGRAMACIÓN",
+        "date": "2021 - 2022",
+        "school": "UNIVERSIDAD TECNOLÓGICA NACIONAL",
+        "description": "Durante la carrera amplié mis habilidades centrándome en Spring Boot y Angular, mejorando aún más mi experiencia con los conceptos básicos de GitHub y Docker. A lo largo de mis estudios, apliqué estas habilidades desarrollando una aplicación web para el alquiler de vehículos, lo que me permitió profundizar mis conocimientos en Spring Boot, Angular, MySQL, Docker, Git y VSCode. Estas experiencias fueron cruciales para mi graduación, equipándome con una sólida experiencia en programación web, bases de datos y diseño de software."
+      },
+      {
+        "title": "INGENIERÍA EN SISTEMAS",
+        "date": "2018 - 2020",
+        "school": "UNIVERSIDAD TECNOLÓGICA NACIONAL",
+        "description": "Cursé dos años de Ingeniería en Sistemas, obteniendo una sólida base en conceptos fundamentales y prácticas de desarrollo de software. Aunque decidí interrumpir mis estudios, la experiencia proporcionó una base valiosa que continúa influyendo positivamente en mi enfoque hacia los desafíos tecnológicos."
+      }
+    ],
+    "coursesTitle": "Cursos",
+    "courses": {
+      "Microsoft": [
+        "Fundamentos de C# con Microsoft | Agosto 2024",
+        "Acelera la Productividad del Desarrollador con GitHub y Azure para Desarrolladores | Junio 2024",
+        "Fundamentos de GitHub Copilot - Entiende al Programador Asistente de IA | Junio 2024"
+      ],
+      "Google": [
+        "Google Cloud Essentials | Diciembre 2022"
+      ],
+      "Udemy": [
+        "Microservicios con ASP.NET 6 y RabbitMQ | Septiembre 2023",
+        "C# + SQL Server | Septiembre 2022",
+        "SAP CPI | Junio 2022",
+        "Solid & Clean Code | Febrero 2022",
+        ".NET Core | Febrero 2022",
+        "Azure DevOps | Febrero 2022"
+      ],
+      "AI": [
+        "Aplicaciones Inteligentes con Azure Open AI | Febrero 2024"
+      ]
+    },
+    "certificatesTitle": "Certificados",
+    "certificatesSubtitle": "MICROSOFT - UDEMY - GOOGLE - OPEN ENGLISH",
+    "testsTitle": "Test's",
+    "testCompetency": "Test de competencias"
+  },
+  "en": {
+    "title": "Summary",
+    "description": "I am a Programming Technician with a background in Information Systems Engineering. In 2018 I started studying at the National Technological University of Rosario and later specialized in technologies like .NET, Angular, Docker, and SQL. I graduated with distinction in November 2022.\n\nThroughout my career, I have gained experience in both personal and professional projects, excelling in leadership and teamwork. Currently, I continue to expand my knowledge through specialized courses, with a particular focus on software development and improving my English proficiency, which is essential for my growth in the global technology industry.",
+    "experienceTitle": "Professional Experience",
+    "experience": [
+      {
+        "position": "Backend Developer",
+        "date": "2021 - 2024",
+        "company": "Cooperacion Seguros",
+        "tasks": [
+          "<u>Collaboration and Leadership:</u> Collaborated with cross-functional teams to prioritize features using <strong>Jira</strong> and <strong>Confluence</strong>, demonstrating strong teamwork, communication, and leadership skills.",
+          "<u>API Development:</u> Led the development of APIs in <strong>.NET Core</strong>, integrating with <strong>SAP CPI</strong>, which improved system interoperability by 30%.",
+          "<u>Software Quality:</u> Developed and executed <strong>unit and system tests</strong> to ensure high software quality.",
+          "<u>Software Communication:</u> Built and maintained <strong>REST</strong> and <strong>SOAP APIs</strong> for seamless software communication.",
+          "<u>Database Optimization:</u> Optimized <strong>SQL Server</strong> databases, improving query performance by 25%.",
+          "<u>Messaging Management:</u> Developed services with <strong>RabbitMQ</strong> for efficient message queue management.",
+          "<u>Innovation and Efficiency:</u> Integrated <strong>Azure Open AI</strong> services and used <strong>GitHub Copilot</strong> to boost coding productivity."
+        ]
+      },
+      {
+        "position": "Full Stack Developer",
+        "date": "2023 - Present",
+        "company": "Freelance",
+        "tasks": [
+          "Designed and developed web applications using cutting-edge technologies such as <strong>Angular</strong>, <strong>.NET</strong>, <strong>Docker</strong>, and <strong>Digital Ocean</strong>.",
+          "Implemented software solutions based on client needs, achieving a 90% satisfaction rate.",
+          "Created and maintained efficient and scalable databases using SQL.",
+          "Built a real-time stock management app for a butcher shop using <strong>Angular</strong>, <strong>.NET Core 6/8</strong>, and <strong>MySQL</strong>, resulting in a 15% improvement in inventory accuracy and reduced stock discrepancies.",
+          "Developed a car rental app prototype using <strong>Angular</strong>, <strong>SpringBoot</strong>, and <strong>MySQL</strong>, which was successfully sold to a local company, increasing rental service efficiency by 25%."
+        ]
+      }
+    ],
+    "educationTitle": "Education",
+    "education": [
+      {
+        "title": "TECHNICIAN IN PROGRAMMING",
+        "date": "2021 - 2022",
+        "school": "NATIONAL TECHNOLOGICAL UNIVERSITY",
+        "description": "During my studies, I enhanced my skills by focusing on Spring Boot and Angular, further strengthening my experience with GitHub and Docker basics. I applied these skills in a web application project for car rental, gaining hands-on experience in Spring Boot, Angular, MySQL, Docker, Git, and VSCode. These projects were key to my graduation and gave me a solid foundation in web programming, databases, and software design."
+      },
+      {
+        "title": "SYSTEMS ENGINEERING",
+        "date": "2018 - 2020",
+        "school": "NATIONAL TECHNOLOGICAL UNIVERSITY",
+        "description": "I completed two years of Systems Engineering, gaining a strong foundation in core software development concepts and practices. Although I chose to pause my studies, the experience provided valuable knowledge that continues to positively influence my approach to technological challenges."
+      }
+    ],
+    "coursesTitle": "Courses",
+    "courses": {
+      "Microsoft": [
+        "C# Fundamentals with Microsoft | August 2024",
+        "Boost Developer Productivity with GitHub and Azure | June 2024",
+        "GitHub Copilot Fundamentals - Understanding the AI Programming Assistant | June 2024"
+      ],
+      "Google": [
+        "Google Cloud Essentials | December 2022"
+      ],
+      "Udemy": [
+        "Microservices with ASP.NET 6 and RabbitMQ | September 2023",
+        "C# + SQL Server | September 2022",
+        "SAP CPI | June 2022",
+        "Solid & Clean Code | February 2022",
+        ".NET Core | February 2022",
+        "Azure DevOps | February 2022"
+      ],
+      "AI": [
+        "Intelligent Apps with Azure Open AI | February 2024"
+      ]
+    },
+    "certificatesTitle": "Certificates",
+    "certificatesSubtitle": "MICROSOFT - UDEMY - GOOGLE - OPEN ENGLISH",
+    "testsTitle": "Tests",
+    "testCompetency": "Competency test"
+  }
+}

@@ -31,7 +31,7 @@ export class ProyectComponent implements OnInit {
     },
     {
       titleEs: 'Alquiler de vehiculos (SpringBoot + Angular + MySql)',
-      titleEn: 'Car rental (SpringBoot + Angular + MySql)',
+      titleEn: 'Rental Cars <br>(SpringBoot + Angular + MySql)',
       image: 'assets/img/proyects/rentalsVenado.png',
       altText: 'Car rental web site',
       filterClass: 'filter-app',
@@ -40,7 +40,7 @@ export class ProyectComponent implements OnInit {
     },
     {
       titleEs: 'Web de Noticias con Angular',
-      titleEn: 'News Web with Angular',
+      titleEn: 'News Web (Angular)',
       image: 'assets/img/proyects/Imagen para portfolio.png',
       altText: 'News Web with Angular',
       filterClass: 'filter-web',
@@ -92,6 +92,24 @@ export class ProyectComponent implements OnInit {
       demoLink: 'https://marvelapp.com/prototype/j8j4i3e',
       repoLink: 'https://github.com/abrahamraies/peliculasApp'
     },
+    {
+      titleEs: 'App de Recetas (.NET 9 + React 19 + Tailwind v4)',
+      titleEn: 'Recipes App<br>(.NET 9 + React 19 + Tailwind v4)',
+      image: 'assets/img/proyects/recipeApp.png',
+      altText: 'Recipes App',
+      filterClass: 'filter-app',
+      demoLink: 'https://recipes-app01.netlify.app/',
+      repoLink: 'https://github.com/abrahamraies'
+    },
+    {
+      titleEs: 'Guía de Actividades Físicas (.NET 8 + React 18)',
+      titleEn: 'Fitness Activity Guide<br>(.NET 8 + React 18)',
+      image: 'assets/img/proyects/gymFitnessGuide.png',
+      altText: 'Fitness Guide App',
+      filterClass: 'filter-app',
+      demoLink: 'https://gymfitnessguide.alwaysdata.net/app',
+      repoLink: 'https://github.com/abrahamraies/GymFitnessFrontEnd'
+    }
   ];
 
   constructor(private languageService: LanguageService) { }

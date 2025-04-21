@@ -13,6 +13,7 @@ import { ProyectComponent } from './components/proyects/proyect.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CertificadosComponent } from './components/certificados/certificados.component';
 import { AllcomponentsComponent } from './components/allcomponents/allcomponents.component';
+import { WhatICanDoComponent } from './components/canDoForYou/what-i-can-do/what-i-can-do.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { AllcomponentsComponent } from './components/allcomponents/allcomponents
     ResumeComponent,
     ProyectComponent,
     CertificadosComponent,
-    AllcomponentsComponent
+    AllcomponentsComponent,
+    WhatICanDoComponent
   ],
   imports: [
     BrowserModule,

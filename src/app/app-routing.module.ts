@@ -6,6 +6,7 @@ import { CertificadosComponent } from './components/certificados/certificados.co
 import { UdemyCertificatesComponent } from './components/certificados/Udemy/udemy-certificates/udemy-certificates.component';
 import { OtherCertificatesComponent } from './components/certificados/Others/other-certificates/other-certificates.component';
 import { GoogleCertificatesComponent } from './components/certificados/Google/google-certificates/google-certificates.component';
+import { WhatICanDoComponent } from './components/canDoForYou/what-i-can-do/what-i-can-do.component';
 
 const routes: Routes = [
   {path: 'certificados', component: CertificadosComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'certificates/others', component: OtherCertificatesComponent},
   {path: 'certificates/google', component: GoogleCertificatesComponent},
   {path: 'about', component: AboutComponent},
+  { path: 'what-i-do', component: WhatICanDoComponent },
   {path: '', pathMatch: 'full', component: AllcomponentsComponent}
 ];
 

@@ -1,59 +1,75 @@
 #skills {
-  background-color: #d8d8d8;
-  padding: 40px 0;
+  background: linear-gradient(145deg, #f4f7fa, #e6ecf1);
+  padding: 60px 20px;
 }
 
-.section-title {
-  text-align: center;
-  margin-bottom: 30px;
+.section-title h2 {
+  font-size: 32px;
+  color: #2c3e50;
+  font-weight: bold;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: #3498db;
+  margin: 10px auto 0;
+  border-radius: 2px;
 }
 
 .skills-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
 }
 
 .skills-category {
-  background: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
+  background: #ffffff;
+  padding: 25px 20px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .skills-category:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
 .skills-category h4 {
-  margin-bottom: 15px;
+  font-size: 20px;
   color: #3498db;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-ul {
-  list-style-type: none;
+.skills-category ul {
+  list-style: none;
   padding: 0;
 }
 
-ul > li {
-  margin: 10px 0;
-  padding-left: 20px;
-  position: relative;
+.skills-category li {
+  font-size: 16px;
+  color: #2c3e50;
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-ul > li::before {
-  content: '•';
-  color: #3498db;
-  position: absolute;
-  left: 0;
-  top: 0;
-  font-size: 1.2em;
+.skills-category li i {
+  font-size: 20px;
 }
 
 @media (max-width: 768px) {
-  .skills-list {
-    grid-template-columns: 1fr;
+  .section-title h2 {
+    font-size: 26px;
   }
 }

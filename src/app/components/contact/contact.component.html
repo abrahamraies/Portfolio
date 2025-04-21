@@ -1,49 +1,150 @@
 <section id="contact" class="contact">
   <div class="container">
-    <div class="section-title" *ngIf="currentLanguage === 'es'">
-      <h2>Contacto</h2>
+    <div class="section-title">
+      <h2 *ngIf="currentLanguage === 'es'">Contacto</h2>
+      <h2 *ngIf="currentLanguage === 'en'">Contact</h2>
     </div>
 
-    <div class="section-title" *ngIf="currentLanguage === 'en'">
-      <h2>Contact</h2>
-    </div>
-
-    <div class="contact-content">
+    <div class="contact-wrapper">
       <div class="contact-info">
-        <div class="info">
-          <div class="address">
-            <i class="bi bi-geo-alt"></i>
-            <h4>Location:</h4>
-            <p>Melbourne, Victoria. CP: 3000</p>
-          </div>
-
-          <div class="email">
-            <a href="mailto:abrahamraies@gmail.com"
-              ><i class="bi bi-envelope"></i
-            ></a>
-            <h4>Email:</h4>
-            <p>abrahamraies&#64;gmail.com</p>
-          </div>
-
-          <div class="phone">
-            <i class="bi bi-phone"></i>
-            <h4>
-              Teléfono:
-              <a
-                class="fab"
-                href="https://wa.me/610403813848/?text=Hello%20,how%20are%20you?"
-                target="_blank"
-              >
-                <img
-                  src="assets/img/WhatsApp logo.png"
-                  width="45"
-                  height="45"
-                />
-              </a>
-            </h4>
-            <p>+61 0403813848</p>
-          </div>
+        <div class="info-block">
+          <i class="bi bi-geo-alt"></i>
+          <h4>{{ currentLanguage === "es" ? "Ubicación" : "Location" }}</h4>
+          <p>Gold Coast. CP: 4226</p>
         </div>
+
+        <div class="info-block">
+          <i class="bi bi-envelope"></i>
+          <h4>Email:</h4>
+          <p>
+            <a href="mailto:abrahamraies@gmail.com"
+              >abrahamraies&#64;gmail.com</a
+            >
+          </p>
+        </div>
+
+        <div class="info-block">
+          <i class="bi bi-phone"></i>
+          <h4>{{ currentLanguage === "es" ? "Teléfono" : "Phone" }}</h4>
+          <p>+61 0403813848</p>
+          <a
+            class="whatsapp"
+            href="https://wa.me/610403813848/?text={{
+              currentLanguage === 'es'
+                ? 'Hola, ¿cómo estás?'
+                : 'Hello, how are you?'
+            }}"
+            target="_blank"
+          >
+            <img
+              src="assets/img/WhatsApp logo.png"
+              alt="WhatsApp"
+              width="45"
+              height="45"
+            />
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+          <div class="form-group">
+            <label>{{ currentLanguage === "es" ? "Nombre" : "Name" }}</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="name"
+              [placeholder]="
+                currentLanguage === 'es' ? 'Tu nombre' : 'Your name'
+              "
+            />
+            <small
+              *ngIf="
+                contactForm.get('name')?.invalid &&
+                contactForm.get('name')?.touched
+              "
+            >
+              {{
+                currentLanguage === "es" ? "Nombre inválido." : "Invalid name."
+              }}
+            </small>
+            <input
+              type="text"
+              formControlName="honeypot"
+              style="display: none"
+            />
+          </div>
+
+          <div class="form-group">
+            <label>Email</label>
+            <input
+              type="email"
+              class="form-control"
+              formControlName="email"
+              placeholder="your@email.com"
+            />
+            <small
+              *ngIf="
+                contactForm.get('email')?.invalid &&
+                contactForm.get('email')?.touched
+              "
+            >
+              {{
+                currentLanguage === "es" ? "Email inválido." : "Invalid email."
+              }}
+            </small>
+          </div>
+
+          <div class="form-group">
+            <label>{{ currentLanguage === "es" ? "Asunto" : "Reason" }}</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="reason"
+              [placeholder]="
+                currentLanguage === 'es'
+                  ? 'Motivo del mensaje'
+                  : 'Reason for contacting'
+              "
+            />
+          </div>
+
+          <div class="form-group">
+            <label>{{
+              currentLanguage === "es" ? "Mensaje" : "Message"
+            }}</label>
+            <textarea
+              rows="5"
+              class="form-control"
+              formControlName="message"
+              [placeholder]="
+                currentLanguage === 'es'
+                  ? 'Escribe tu mensaje aquí...'
+                  : 'Write your message here...'
+              "
+            ></textarea>
+            <small
+              *ngIf="
+      contactForm.get('message')?.touched &&
+      contactForm.get('message')?.errors?.['minlength']"
+              class="text-danger"
+            >
+              {{
+                currentLanguage === "es"
+                  ? "El mensaje debe tener al menos 20 caracteres."
+                  : "The message must be at least 20 characters."
+              }}
+            </small>
+          </div>
+
+          <button
+            type="submit"
+            class="btn-submit"
+            [disabled]="contactForm.invalid"
+          >
+            {{ currentLanguage === "es" ? "Enviar" : "Send" }}
+          </button>
+        </form>
       </div>
     </div>
   </div>
