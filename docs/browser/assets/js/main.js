@@ -144,8 +144,12 @@
         proyectIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
+        let firstRun = true;
         proyectIsotope.on('arrangeComplete', function() {
-          AOS.refresh()
+          if (firstRun) {
+            setTimeout(() => AOS.refresh(), 100);
+            firstRun = false;
+          }
         });
       }, true);
     }
