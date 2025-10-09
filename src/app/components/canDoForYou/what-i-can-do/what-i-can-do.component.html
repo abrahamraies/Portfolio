@@ -1,34 +1,55 @@
 <section class="what-i-do-container">
-  <h1>{{ t.title }}</h1>
-  <p class="subheading">{{ t.subtitle }}</p>
+  <h1 class="animate__animated animate__fadeInDown">{{ t.title }}</h1>
+  <p class="subheading animate__animated animate__fadeInUp">{{ t.subtitle }}</p>
 
-  <h2>{{ t.servicesTitle || '¿Qué puedo hacer por vos?' }}</h2>
+  <h2 class="section-title animate__animated animate__fadeInLeft">
+    {{ t.servicesTitle || "¿Qué puedo hacer por vos?" }}
+  </h2>
   <ul class="services">
-    <li *ngFor="let service of t.services">✔️ {{ service }}</li>
+    <li
+      *ngFor="let service of t.services; let index = index"
+      class="animate__animated animate__fadeIn"
+      [ngClass]="'animate__delay-' + (index % 5) + 's'"
+    >
+      <i class="fas fa-check-circle"></i> {{ service }}
+    </li>
   </ul>
 
-  <h2>{{ t.results }}</h2>
+  <h2 class="section-title animate__animated animate__fadeInRight">
+    {{ t.results }}
+  </h2>
   <div class="projects">
-    <div class="project-card" *ngFor="let project of t.projects">
+    <div
+      class="project-card animate__animated animate__zoomIn"
+      *ngFor="let project of t.projects; let index = index"
+      [ngClass]="'animate__delay-' + (index % 3) + 's'"
+    >
       <img [src]="project.img" [alt]="project.title" />
       <div class="project-content">
         <h3>{{ project.title }}</h3>
         <p>{{ project.desc }}</p>
         <a [href]="project.link" target="_blank" class="project-btn">
-          🔗 {{ isSpanish ? 'Ver Página' : 'View Live' }}
+          <i class="fas fa-external-link-alt"></i>
+          {{ isSpanish ? "Ver Página" : "View Live" }}
         </a>
       </div>
     </div>
   </div>
 
-  <h2>{{ t.stepsTitle }}</h2>
+  <h2 class="section-title animate__animated animate__fadeInLeft">
+    {{ t.stepsTitle }}
+  </h2>
   <ol class="steps">
-    <li *ngFor="let step of t.steps; let i = index">
-      <strong>{{ i + 1 }}.</strong> {{ step }}
+    <li
+      *ngFor="let step of t.steps; let i = index"
+      class="animate__animated animate__fadeInUp"
+      [ngClass]="'animate__delay-' + i + 's'"
+    >
+      <strong class="step-number">{{ i + 1 }}</strong> {{ step }}
     </li>
   </ol>
 
-  <div class="cta">
+  <div class="cta animate__animated animate__pulse animate__infinite">
     <h2>{{ t.cta }}</h2>
     <button (click)="goToContact()" class="cta-btn">{{ t.ctaBtn }}</button>
   </div>

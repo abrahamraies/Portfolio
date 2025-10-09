@@ -3,20 +3,81 @@
   flex-wrap: wrap;
   gap: 40px;
   justify-content: center;
-  align-items: flex-start;
+  align-items: stretch;
   margin-top: 30px;
 }
 
+/* === Tarjetas === */
 .contact-info,
 .contact-form {
   flex: 1 1 400px;
   max-width: 500px;
   background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 0 24px rgba(0, 0, 0, 0.12);
+  padding: 35px;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+.contact-info:hover,
+.contact-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* === Bloques de información === */
+.info-block {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  transition: transform 0.3s ease;
+}
+
+.info-block:hover {
+  transform: translateX(5px);
+}
+
+.icon {
+  background: #eaf6fc;
+  color: #149ddd;
+  font-size: 24px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info-text h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #050d18;
+}
+
+.info-text p,
+.info-text a {
+  margin: 3px 0 0 0;
+  color: #173b6c;
+  font-size: 15px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.info-text a:hover {
+  color: #149ddd;
+  text-decoration: underline;
+}
+
+.whatsapp {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* === Formulario === */
 .form-group {
   margin-bottom: 20px;
 }
@@ -30,12 +91,11 @@
 
 .form-control {
   width: 100%;
-  padding: 10px 15px;
+  padding: 12px 14px;
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 16px;
-  outline: none;
-  transition: 0.3s ease-in-out;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .form-control:focus {
@@ -48,6 +108,7 @@ small {
   font-size: 13px;
 }
 
+/* === Botón === */
 .btn-submit {
   background-color: #149ddd;
   color: white;
@@ -55,9 +116,14 @@ small {
   border: none;
   border-radius: 8px;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-submit:hover:not(:disabled) {
+  background-color: #117bb8;
+  transform: translateY(-2px);
 }
 
 .btn-submit:disabled {
@@ -65,56 +131,20 @@ small {
   cursor: not-allowed;
 }
 
-.btn-submit:hover:not(:disabled) {
-  background-color: #117bb8;
-}
-
-.info-block {
-  display: flex;
-  align-items: center;
-  margin-bottom: 25px;
-}
-
-.info-block i {
-  font-size: 24px;
-  color: #149ddd;
-  margin-right: 15px;
-  background: #dff3fc;
-  padding: 12px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.info-block h4 {
-  margin: 0;
-  font-size: 20px;
-  font-weight: 600;
-  color: #050d18;
-}
-
-.info-block p,
-.info-block a {
-  margin: 5px 0 0 0;
-  padding-left: 39px;
-  color: #173b6c;
-  font-size: 16px;
-  text-decoration: none;
-}
-
-.info-block a:hover {
-  text-decoration: underline;
-}
-
-.whatsapp {
-  display: inline-block;
-  margin-top: 10px;
-  padding-left: 39px;
-}
-
+/* === Responsive === */
 @media (max-width: 768px) {
   .contact-wrapper {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info,
+  .contact-form {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .info-block {
+    justify-content: flex-start;
   }
 }

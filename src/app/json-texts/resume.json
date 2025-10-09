@@ -5,6 +5,19 @@
     "experienceTitle": "Experiencia profesional",
     "experience": [
       {
+        "position": "Desarrollador .NET Web",
+        "date": "2024 - Actualidad",
+        "company": "Koben",
+        "tasks": [
+          "Desarrollo de aplicaciones web modernas utilizando <strong>.NET 6/8</strong> y <strong>React</strong>, basadas en diseños de <strong>Figma</strong> y requerimientos específicos de los clientes.",
+          "Personalización y mantenimiento de proyectos en <strong>Umbraco CMS</strong> (v8, v10, v11 y v13), creando <strong>tipos de datos personalizados</strong>, controladores y componentes reutilizables.",
+          "Gestión de repositorios y flujos de trabajo en <strong>Azure DevOps</strong>, incluyendo la creación, mantenimiento y optimización de <strong>pipelines de CI/CD</strong>, <strong>releases</strong> automatizadas y revisión de código en pull requests.",
+          "Administración de recursos en <strong>Azure Portal</strong>: despliegue y configuración de <strong>App Services</strong>, ejecución de <strong>swaps</strong> de entornos, mantenimiento de <strong>Azure Functions</strong>, <strong>Key Vaults</strong> y <strong>Application Insights</strong>.",
+          "Participación activa en reuniones de planificación y revisión, colaborando con diseñadores, PMs y QA para garantizar entregas de alta calidad y cumplimiento de plazos.",
+          "Implementación de mejoras continuas en la arquitectura, rendimiento y seguridad de las soluciones entregadas, siguiendo principios de <strong>Clean Architecture</strong> y buenas prácticas de desarrollo moderno."
+        ]
+      },
+      {
         "position": "Desarrollador Backend",
         "date": "2021 - 2024",
         "company": "Cooperacion Seguros",
@@ -78,6 +91,19 @@
     "description": "I am a Programming Technician with a background in Information Systems Engineering. In 2018 I started studying at the National Technological University of Rosario and later specialized in technologies like .NET, Angular, Docker, and SQL. I graduated with distinction in November 2022.\n\nThroughout my career, I have gained experience in both personal and professional projects, excelling in leadership and teamwork. Currently, I continue to expand my knowledge through specialized courses, with a particular focus on software development and improving my English proficiency, which is essential for my growth in the global technology industry.",
     "experienceTitle": "Professional Experience",
     "experience": [
+      {
+        "position": ".NET Web Developer",
+        "date": "2024 - Present",
+        "company": "Koben",
+        "tasks": [
+          "Developing modern web applications using <strong>.NET 6/8</strong> and <strong>React</strong>, based on <strong>Figma</strong> designs and client specifications.",
+          "Customizing and maintaining <strong>Umbraco CMS</strong> projects (v8, v10, v11, v13), implementing <strong>custom data types</strong>, controllers, and reusable components.",
+          "Managing repositories and workflows in <strong>Azure DevOps</strong>, including creation, maintenance, and optimization of <strong>CI/CD pipelines</strong>, automated <strong>releases</strong>, and code reviews via pull requests.",
+          "Administering resources in <strong>Azure Portal</strong>: deploying and configuring <strong>App Services</strong>, performing <strong>environment swaps</strong>, maintaining <strong>Azure Functions</strong>, <strong>Key Vaults</strong>, and <strong>Application Insights</strong>.",
+          "Actively participating in sprint planning and review meetings, collaborating with designers, PMs, and QA teams to ensure timely delivery of high-quality solutions.",
+          "Implementing continuous improvements in architecture, performance, and security, following <strong>Clean Architecture</strong> principles and modern development best practices."
+        ]
+      },
       {
         "position": "Backend Developer",
         "date": "2021 - 2024",

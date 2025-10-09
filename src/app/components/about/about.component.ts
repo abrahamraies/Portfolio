@@ -27,16 +27,17 @@ export class AboutComponent implements OnInit {
   ngOnInit(): void {
     this.languageService.currentLanguage$.subscribe((language) => {
       this.currentLanguage = language as 'es' | 'en';
+      this.languageToggleLabel = language === 'es' ? 'Inglés' : 'Spanish'
       this.setAboutMeText();
     });
   }
 
   setAboutMeText() {
-      const langTexts = aboutMeTexts[this.currentLanguage];
-      this.whatICanDoForYou = langTexts.whatICanDoForYou;
-      this.aboutMeIntro = langTexts.intro;
-      this.aboutMeDescription = langTexts.description;
-      this.aboutMeDetails = langTexts.details;
+    const langTexts = aboutMeTexts[this.currentLanguage];
+    this.whatICanDoForYou = langTexts.whatICanDoForYou;
+    this.aboutMeIntro = langTexts.intro;
+    this.aboutMeDescription = langTexts.description;
+    this.aboutMeDetails = langTexts.details;
   }
 
   changeLanguage() {

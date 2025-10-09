@@ -6,47 +6,61 @@
     </div>
 
     <div class="contact-wrapper">
+      <!-- 🧭 Info de contacto -->
       <div class="contact-info">
-        <div class="info-block">
-          <i class="bi bi-geo-alt"></i>
-          <h4>{{ currentLanguage === "es" ? "Ubicación" : "Location" }}</h4>
-          <p>Gold Coast. CP: 4226</p>
+        <div class="info-block" data-aos="fade-right">
+          <div class="icon">
+            <i class="bi bi-geo-alt"></i>
+          </div>
+          <div class="info-text">
+            <h4>{{ currentLanguage === "es" ? "Ubicación" : "Location" }}</h4>
+            <p>Gold Coast, QLD — CP: 4226</p>
+          </div>
         </div>
 
-        <div class="info-block">
-          <i class="bi bi-envelope"></i>
-          <h4>Email:</h4>
-          <p>
-            <a href="mailto:abrahamraies@gmail.com"
-              >abrahamraies&#64;gmail.com</a
+        <div class="info-block" data-aos="fade-right">
+          <div class="icon">
+            <i class="bi bi-envelope"></i>
+          </div>
+          <div class="info-text">
+            <h4>Email</h4>
+            <p>
+              <a href="mailto:abrahamraies@gmail.com"
+                >abrahamraies&#64;gmail.com</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <div class="info-block" data-aos="fade-right">
+          <div class="icon">
+            <i class="bi bi-phone"></i>
+          </div>
+          <div class="info-text">
+            <h4>{{ currentLanguage === "es" ? "Teléfono" : "Phone" }}</h4>
+            <p>+61 0403 813 848</p>
+            <a
+              class="whatsapp"
+              href="https://wa.me/610403813848/?text={{
+                currentLanguage === 'es'
+                  ? 'Hola, ¿cómo estás?'
+                  : 'Hello, how are you?'
+              }}"
+              target="_blank"
             >
-          </p>
-        </div>
-
-        <div class="info-block">
-          <i class="bi bi-phone"></i>
-          <h4>{{ currentLanguage === "es" ? "Teléfono" : "Phone" }}</h4>
-          <p>+61 0403813848</p>
-          <a
-            class="whatsapp"
-            href="https://wa.me/610403813848/?text={{
-              currentLanguage === 'es'
-                ? 'Hola, ¿cómo estás?'
-                : 'Hello, how are you?'
-            }}"
-            target="_blank"
-          >
-            <img
-              src="assets/img/WhatsApp logo.png"
-              alt="WhatsApp"
-              width="45"
-              height="45"
-            />
-          </a>
+              <img
+                src="assets/img/WhatsApp logo.png"
+                alt="WhatsApp"
+                width="45"
+                height="45"
+              />
+            </a>
+          </div>
         </div>
       </div>
 
-      <div class="contact-form">
+      <!-- 📝 Formulario -->
+      <div class="contact-form" data-aos="fade-left">
         <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
           <div class="form-group">
             <label>{{ currentLanguage === "es" ? "Nombre" : "Name" }}</label>
@@ -125,8 +139,9 @@
             ></textarea>
             <small
               *ngIf="
-      contactForm.get('message')?.touched &&
-      contactForm.get('message')?.errors?.['minlength']"
+                contactForm.get('message')?.touched &&
+                contactForm.get('message')?.errors?.['minlength']
+              "
               class="text-danger"
             >
               {{

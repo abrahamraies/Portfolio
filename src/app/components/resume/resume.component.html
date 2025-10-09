@@ -2,9 +2,7 @@
   <div class="container">
     <div class="section-title">
       <h2>{{ content.title }}</h2>
-      <p>
-        {{ content.description }}
-      </p>
+      <p>{{ content.description }}</p>
     </div>
 
     <div class="row">
@@ -13,12 +11,12 @@
         <h3 class="resume-title" style="text-align: center">
           {{ content.experienceTitle }}
         </h3>
+
+        <!-- Experiencias previas existentes -->
         <div *ngFor="let job of content.experience" class="resume-item">
           <h4>{{ job.position }}</h4>
           <h5>{{ job.date }}</h5>
-          <p>
-            <em>{{ job.company }}</em>
-          </p>
+          <p><em>{{ job.company }}</em></p>
           <ul>
             <li *ngFor="let task of job.tasks" [innerHTML]="task"></li>
           </ul>
@@ -27,7 +25,9 @@
 
       <!-- Educación -->
       <div class="col-lg-12" data-aos="fade-up">
-        <h3 class="resume-title" style="text-align: center">{{ content.educationTitle }}</h3>
+        <h3 class="resume-title" style="text-align: center">
+          {{ content.educationTitle }}
+        </h3>
         <div *ngFor="let edu of content.education" class="resume-item">
           <h4>{{ edu.title }}</h4>
           <h5>{{ edu.date }}</h5>
@@ -40,7 +40,7 @@
       <div class="col-lg-12 section-bg" data-aos="fade-up">
         <h3 class="resume-title text-center" id="cursos">{{ content.coursesTitle }}</h3>
         <div class="resume-item pb-0">
-          <ng-container *ngFor="let category of content.courses| keyvalue">
+          <ng-container *ngFor="let category of content.courses | keyvalue">
             <a
               [routerLink]="getCourseLink(category.key)"
               target="_blank"
@@ -60,10 +60,7 @@
             </a>
 
             <ng-template #externalLink>
-              <a
-                [href]="getExternalLink(category.key)"
-                target="_blank"
-              >
+              <a [href]="getExternalLink(category.key)" target="_blank">
                 <h4
                   style="
                     color: #2980b9;
@@ -90,17 +87,22 @@
 
       <!-- Certificados y Test's -->
       <div class="col-lg-12" data-aos="fade-up">
-        <h3 class="resume-title" style="text-align: center">{{content.certificatesTitle}}</h3>
-        <a routerLink="/certificados" style="text-align: center"
-          ><h5>{{content.certificatesSubtitle}}</h5></a
-        >
-        <h4 class="resume-title" style="text-align: center">{{content.testsTitle}}</h4>
+        <h3 class="resume-title" style="text-align: center">
+          {{ content.certificatesTitle }}
+        </h3>
+        <a routerLink="/certificados" style="text-align: center">
+          <h5>{{ content.certificatesSubtitle }}</h5>
+        </a>
+        <h4 class="resume-title" style="text-align: center">
+          {{ content.testsTitle }}
+        </h4>
         <a
           href="https://firebasestorage.googleapis.com/v0/b/frontend-portfolio-b48a3.appspot.com/o/AR63023500101-06-01-2024-ETRF.pdf?alt=media&token=f926dea0-fd51-4327-9af2-07ce10674bf3"
           target="_blank"
           style="text-align: center"
-          ><h5>{{content.testCompetency}}</h5></a
         >
+          <h5>{{ content.testCompetency }}</h5>
+        </a>
       </div>
     </div>
   </div>
