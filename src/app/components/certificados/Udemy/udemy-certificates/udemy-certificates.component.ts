@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
   styleUrl: './udemy-certificates.component.css'
 })
 export class UdemyCertificatesComponent {
+  isSpanish = localStorage.getItem('lang') === 'es';
+
 
   constructor(private router: Router) { }
 

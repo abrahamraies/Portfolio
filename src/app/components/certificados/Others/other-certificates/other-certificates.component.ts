@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
   styleUrl: './other-certificates.component.css'
 })
 export class OtherCertificatesComponent {
+  isSpanish = localStorage.getItem('lang') === 'es';
+
 
   constructor(private router: Router) { }
 
