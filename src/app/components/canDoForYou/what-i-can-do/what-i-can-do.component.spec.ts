@@ -8,7 +8,7 @@ describe('WhatICanDoComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [WhatICanDoComponent]
+      declarations: [WhatICanDoComponent]
     })
     .compileComponents();
 
