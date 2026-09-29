@@ -21,6 +21,42 @@ export class ProyectComponent implements OnInit {
 
   projects: Project[] = [
     {
+      titleEs: 'Hierros Raies (Astro + Tailwind)',
+      titleEn: 'Hierros Raies (Astro + Tailwind)',
+      image: 'assets/img/proyects/hierros-raies.svg',
+      altText: 'Hierros Raies website',
+      filterClass: 'filter-web',
+      demoLink: 'https://www.hierrosraies.com.ar/',
+      repoLink: 'https://www.hierrosraies.com.ar/'
+    },
+    {
+      titleEs: 'Nexa Logística (Sitio web)',
+      titleEn: 'Nexa Logística (Website)',
+      image: 'assets/img/proyects/nexa-logistica.svg',
+      altText: 'Nexa Logística website',
+      filterClass: 'filter-web',
+      demoLink: 'https://nexa-logistica.vercel.app/',
+      repoLink: 'https://nexa-logistica.vercel.app/'
+    },
+    {
+      titleEs: 'GlowUp HR (Next.js + React + Tailwind)',
+      titleEn: 'GlowUp HR (Next.js + React + Tailwind)',
+      image: 'assets/img/proyects/glowup-hr.svg',
+      altText: 'GlowUp HR website',
+      filterClass: 'filter-web',
+      demoLink: 'https://glowuphr.com.ar/',
+      repoLink: 'https://glowuphr.com.ar/'
+    },
+    {
+      titleEs: 'Electronet Montajes (Next.js + Tailwind + Framer Motion)',
+      titleEn: 'Electronet Montajes (Next.js + Tailwind + Framer Motion)',
+      image: 'assets/img/proyects/electronet.svg',
+      altText: 'Electronet Montajes website',
+      filterClass: 'filter-web',
+      demoLink: 'https://electronetmi.com/',
+      repoLink: 'https://electronetmi.com/'
+    },
+    {
       titleEs: 'App de manejo de stock en tiempo real (.NET + Angular + MySql)',
       titleEn: 'Real-Time Stock Management App (.NET + Angular + MySql)',
       image: 'assets/img/proyects/Principal.png',
