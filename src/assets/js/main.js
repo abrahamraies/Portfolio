@@ -144,12 +144,24 @@
         filter.addEventListener("click", (e) => {
           e.preventDefault();
 
-          proyectFilters.forEach((el) => el.classList.remove("filter-active"));
+          proyectFilters.forEach((el) => {
+            el.classList.remove("filter-active");
+            el.setAttribute("aria-pressed", "false");
+          });
           filter.classList.add("filter-active");
+          filter.setAttribute("aria-pressed", "true");
 
           proyectIsotope.arrange({
             filter: filter.getAttribute("data-filter"),
           });
+        });
+
+        // Keyboard support: Enter or Space activates the filter like a click
+        filter.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            filter.click();
+          }
         });
       });
     }
