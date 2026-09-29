@@ -38,23 +38,27 @@
           </div>
           <div class="info-text">
             <h4>{{ currentLanguage === "es" ? "Teléfono" : "Phone" }}</h4>
-            <p>+61 0403 813 848</p>
-            <a
-              class="whatsapp"
-              href="https://wa.me/610403813848/?text={{
-                currentLanguage === 'es'
-                  ? 'Hola, ¿cómo estás?'
-                  : 'Hello, how are you?'
-              }}"
-              target="_blank"
-            >
-              <img
-                src="assets/img/WhatsApp logo.png"
-                alt="WhatsApp"
-                width="45"
-                height="45"
-              />
-            </a>
+            <div class="phone-row">
+              <p>+61 0403 813 848</p>
+              <a
+                class="whatsapp"
+                [attr.aria-label]="currentLanguage === 'es' ? 'Escribir por WhatsApp' : 'Message on WhatsApp'"
+                href="https://wa.me/610403813848/?text={{
+                  currentLanguage === 'es'
+                    ? 'Hola, ¿cómo estás?'
+                    : 'Hello, how are you?'
+                }}"
+                target="_blank"
+                rel="noopener"
+              >
+                <img
+                  src="assets/img/WhatsApp logo.png"
+                  alt="WhatsApp"
+                  width="32"
+                  height="32"
+                />
+              </a>
+            </div>
           </div>
         </div>
       </div>
