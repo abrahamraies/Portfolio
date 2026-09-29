@@ -199,7 +199,7 @@ h6 {
 
 #home:before {
   content: "";
-  background: rgba(5, 13, 24, 0.3);
+  background: rgba(5, 13, 24, 0.45);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -420,4 +420,29 @@ section {
 .cert-heading p {
   color: #555;
   margin: 0;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+a:focus-visible,
+button:focus-visible,
+.nav-menu a:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid #149ddd;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
