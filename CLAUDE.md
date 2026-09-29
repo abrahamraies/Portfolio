@@ -26,3 +26,6 @@ Personal portfolio built with Angular 18 (NgModule-based), Bootstrap 5, jQuery/P
 ## Git
 - Commits are authored as the repo owner (`abrahamraies <abrahamraies@gmail.com>`). Never add `Co-Authored-By` or other Claude attribution lines to commits or PRs.
 - Branch names are in Spanish and must not contain "claude" (e.g. `arreglar-pruebas`, `agregar-certificado`).
+
+## Skills
+- `.claude/skills/frontend-design` (from anthropics/claude-code) and `.claude/skills/design-review` (from jezweb/claude-skills, adapted) are vendored for UI/UX work. Use `design-review` to audit pages before and after changes.
