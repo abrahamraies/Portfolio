@@ -21,3 +21,7 @@ Personal portfolio built with Angular 18 (NgModule-based), Bootstrap 5, jQuery/P
 ## Conventions
 - Follow `.editorconfig`. No ESLint/Prettier is configured.
 - Each component ships `.ts/.html/.css/.spec.ts`; keep that structure when adding one (`npx ng generate component ...`).
+
+## Git
+- Commits are authored as the repo owner (`abrahamraies <abrahamraies@gmail.com>`). Never add `Co-Authored-By` or other Claude attribution lines to commits or PRs.
+- Branch names are in Spanish and must not contain "claude" (e.g. `arreglar-pruebas`, `agregar-certificado`).
