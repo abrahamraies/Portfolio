@@ -1,0 +1,23 @@
+# Portfolio
+
+Personal portfolio built with Angular 18 (NgModule-based), Bootstrap 5, jQuery/Popper, and EmailJS for the contact form.
+
+## Commands
+- `npm start` — dev server (`ng serve`)
+- `npm run build` — production build to `dist/front-end`
+- `npm test` — Karma/Jasmine (watch mode, opens Chrome). For CI/headless: `npx ng test --watch=false --browsers=ChromeHeadlessNoSandbox`
+- Typecheck only: `npx tsc --noEmit -p tsconfig.app.json`
+
+## Layout
+- `src/app/components/*` — one folder per section (about, contact, home, certificados, ...). Certificates are split into `Google/`, `Udemy/` and `Others/` sub-components.
+- `src/app/app.module.ts` / `app-routing.module.ts` — declare and route new components here.
+- Static images referenced by the source live in `src/assets`.
+
+## Deployment / generated files
+- `docs/` is the published GitHub Pages output (hashed bundles, vendored assets, `3rdpartylicenses.txt`). Do not hand-edit it; regenerate it from a build.
+- `package-lock.json` is generated; change it only via npm.
+- A PreToolUse hook blocks edits to `docs/`, `dist/` and `package-lock.json`.
+
+## Conventions
+- Follow `.editorconfig`. No ESLint/Prettier is configured.
+- Each component ships `.ts/.html/.css/.spec.ts`; keep that structure when adding one (`npx ng generate component ...`).
