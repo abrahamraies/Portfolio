@@ -19,16 +19,41 @@ button:hover {
 
 .container-idiom {
   display: flex;
-  justify-content: flex-end;
-  padding: 15px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px 60px 0 15px;
+}
+
+.container-idiom .idiom-btn {
+  background: transparent;
+  color: #173b6c;
+  border: 2px solid #173b6c;
+  box-shadow: none;
+}
+
+.container-idiom .idiom-btn:hover {
+  background: #173b6c;
+  color: #fff;
 }
 
 .projects-btn {
-  background-color: #1abc9c;
+  background-color: #149ddd;
 }
 
 .projects-btn:hover {
-  background-color: #17a589;
+  background-color: #0f7fb4;
+}
+
+button:focus-visible {
+  outline: 3px solid #173b6c;
+  outline-offset: 2px;
+}
+
+@media (max-width: 1199px) {
+  .container-idiom {
+    padding-top: 60px;
+  }
 }
 
 .about img {

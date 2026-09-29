@@ -216,9 +216,9 @@ h6 {
 
 #home h1 {
   margin: 0 0 10px 0;
-  font-size: 64px;
+  font-size: clamp(2.25rem, 6vw, 4rem);
   font-weight: 700;
-  line-height: 56px;
+  line-height: 1.1;
   color: #fff;
 }
 
@@ -264,7 +264,9 @@ section {
 }
 
 .section-bg {
-  background: #d8d8d8;
+  background: #eef3f8;
+  border: 1px solid #dbe4ee;
+  border-radius: 12px;
 }
 
 .section-title {
