@@ -2,7 +2,7 @@
 // Usage: npm run deploy            -> build + update docs/
 //        node scripts/deploy-docs.mjs --out <dir> [--skip-build]   (used for testing)
 import { execSync } from 'node:child_process';
-import { cpSync, existsSync, mkdirSync, readdirSync, rmSync } from 'node:fs';
+import { copyFileSync, cpSync, existsSync, mkdirSync, readdirSync, rmSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -29,6 +29,8 @@ for (const entry of readdirSync(target)) {
   if (!keep.has(entry)) rmSync(join(target, entry), { recursive: true, force: true });
 }
 cpSync(source, target, { recursive: true });
+// GitHub Pages serves 404.html for unknown paths; reusing index.html lets Angular handle deep links like /Portfolio/certificates/udemy.
+copyFileSync(join(target, 'index.html'), join(target, '404.html'));
 
 console.log(`> Copied ${source} -> ${target}`);
 console.log('> Review with `git status`, then commit and push to main to publish.');

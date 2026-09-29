@@ -5,7 +5,7 @@ Personal portfolio built with Angular 18 (NgModule-based), Bootstrap 5, jQuery/P
 ## Commands
 - `npm start` — dev server at http://localhost:4200/Portfolio/ (must be served under `/Portfolio/` to match `<base href>`)
 - `npm run build` — production build to `dist/front-end`
-- `npm run deploy` — builds and replaces the contents of `docs/` (GitHub Pages) with the fresh output; then review with `git status` and commit/push to `main`. Run `node scripts/deploy-docs.mjs --out <dir>` to try it against another folder.
+- `npm run deploy` — builds and replaces the contents of `docs/` (GitHub Pages) with the fresh output (plus a `404.html` copy of `index.html` so deep links work); then review with `git status` and commit/push to `main`. Run `node scripts/deploy-docs.mjs --out <dir>` to try it against another folder.
 - `npm test` — Karma/Jasmine (watch mode, opens Chrome). For CI/headless: `npx ng test --watch=false --browsers=ChromeHeadlessNoSandbox`
   In cloud sessions set `CHROME_BIN=/opt/pw-browsers/chromium-1194/chrome-linux/chrome` first.
 - Typecheck only: `npx tsc --noEmit -p tsconfig.app.json`
