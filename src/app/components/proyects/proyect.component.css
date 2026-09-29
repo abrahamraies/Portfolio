@@ -99,3 +99,8 @@
   background-color: #149ddd;
   color: #fff;
 }
+
+.proyect #proyect-flters li:focus-visible {
+  outline: 3px solid #173b6c;
+  outline-offset: 1px;
+}
