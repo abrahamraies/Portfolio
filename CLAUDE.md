@@ -3,7 +3,7 @@
 Personal portfolio built with Angular 18 (NgModule-based), Bootstrap 5, jQuery/Popper, and EmailJS for the contact form.
 
 ## Commands
-- `npm start` — dev server (`ng serve`)
+- `npm start` — dev server at http://localhost:4200/Portfolio/ (must be served under `/Portfolio/` to match `<base href>`)
 - `npm run build` — production build to `dist/front-end`
 - `npm test` — Karma/Jasmine (watch mode, opens Chrome). For CI/headless: `npx ng test --watch=false --browsers=ChromeHeadlessNoSandbox`
   In cloud sessions set `CHROME_BIN=/opt/pw-browsers/chromium-1194/chrome-linux/chrome` first.
@@ -26,3 +26,6 @@ Personal portfolio built with Angular 18 (NgModule-based), Bootstrap 5, jQuery/P
 ## Git
 - Commits are authored as the repo owner (`abrahamraies <abrahamraies@gmail.com>`). Never add `Co-Authored-By` or other Claude attribution lines to commits or PRs.
 - Branch names are in Spanish and must not contain "claude" (e.g. `arreglar-pruebas`, `agregar-certificado`).
+
+## Skills
+- `.claude/skills/frontend-design` (from anthropics/claude-code) and `.claude/skills/design-review` (from jezweb/claude-skills, adapted) are vendored for UI/UX work. Use `design-review` to audit pages before and after changes.

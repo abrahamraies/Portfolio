@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { LanguageService } from './services/language.service';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -18,8 +18,11 @@ export class AppComponent implements OnInit{
   elem6 = false;
 
   constructor(private languageService: LanguageService,private router: Router, private route: ActivatedRoute){
-    this.router.events.subscribe(() => {
+    this.router.events.subscribe((event) => {
       this.currentRoute = this.router.url;
+      if (event instanceof NavigationEnd) {
+        setTimeout(() => this.updateActiveSection());
+      }
     });
   }
   currentRoute: string = '';
@@ -35,50 +38,29 @@ export class AppComponent implements OnInit{
     return this.excludedRoutes.includes(this.currentRoute);
   }
 
-  selected(text:string): void{
-    if(text == 'home'){
-      this.elem1 = true;
-      this.elem2 = false;
-      this.elem3 = false;
-      this.elem4 = false;
-      this.elem5 = false;
-      this.elem6 = false;
-    }else if (text == 'about'){
-      this.elem1 = false;
-      this.elem2 = true;
-      this.elem3 = false;
-      this.elem4 = false;
-      this.elem5 = false;
-      this.elem6 = false;
-    }else if (text == 'skills'){
-      this.elem1 = false;
-      this.elem2 = false;
-      this.elem3 = true;
-      this.elem4 = false;
-      this.elem5 = false;
-      this.elem6 = false;
-    }else if (text == 'resume'){
-      this.elem1 = false;
-      this.elem2 = false;
-      this.elem3 = false;
-      this.elem4 = true;
-      this.elem5 = false;
-      this.elem6 = false;
-    }else if (text == 'proyect'){
-      this.elem1 = false;
-      this.elem2 = false;
-      this.elem3 = false;
-      this.elem4 = false;
-      this.elem5 = true;
-      this.elem6 = false;
-    }else if (text == 'contact'){
-      this.elem1 = false;
-      this.elem2 = false;
-      this.elem3 = false;
-      this.elem4 = false;
-      this.elem5 = false;
-      this.elem6 = true;
+  private readonly sectionIds = ['home', 'about', 'skills', 'resume', 'proyect', 'contact'];
+
+  selected(text: string): void {
+    const index = this.sectionIds.indexOf(text);
+    this.elem1 = index === 0;
+    this.elem2 = index === 1;
+    this.elem3 = index === 2;
+    this.elem4 = index === 3;
+    this.elem5 = index === 4;
+    this.elem6 = index === 5;
+  }
+
+  @HostListener('window:scroll')
+  updateActiveSection(): void {
+    const marker = window.innerHeight * 0.4;
+    let current = '';
+    for (const id of this.sectionIds) {
+      const section = document.getElementById(id);
+      if (section && section.getBoundingClientRect().top <= marker) {
+        current = id;
+      }
     }
+    this.selected(current);
   }
 
   ngOnInit(): void {
