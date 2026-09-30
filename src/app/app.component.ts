@@ -16,6 +16,7 @@ export class AppComponent implements OnInit{
   elem4 = false;
   elem5 = false;
   elem6 = false;
+  showTop = false;
 
   constructor(private languageService: LanguageService,private router: Router, private route: ActivatedRoute){
     this.router.events.subscribe((event) => {
@@ -61,6 +62,7 @@ export class AppComponent implements OnInit{
       }
     }
     this.selected(current);
+    this.showTop = window.scrollY > 400;
   }
 
   ngOnInit(): void {
@@ -70,13 +72,6 @@ export class AppComponent implements OnInit{
   }
 
   scrollToTop() {
-    const scrollStep = -window.scrollY / (1000 / 15);
-    const scrollInterval = setInterval(() => {
-      if (window.scrollY !== 0) {
-        window.scrollBy(0, scrollStep);
-      } else {
-        clearInterval(scrollInterval);
-      }
-    }, 15);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }

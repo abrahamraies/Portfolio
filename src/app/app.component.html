@@ -3,7 +3,7 @@
     <!-- Perfil -->
     <div class="profile text-center">
       <img src="assets/img/Perfil.png" alt="Abraham Raies" class="img-fluid rounded-circle profile-img">
-      <h1 class="text-light"><a href="index.html">Abraham Raies</a></h1>
+      <div class="profile-name text-light"><a href="index.html">Abraham Raies</a></div>
       <div class="social-links mt-3">
         <a href="https://www.facebook.com/abraham.raies.3/" target="_blank" class="social-link facebook" aria-label="Facebook"><i class="bx bxl-facebook"></i></a>
         <a href="https://www.instagram.com/abrahamraies/" target="_blank" class="social-link instagram" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
@@ -35,7 +35,17 @@
       </ul>
     </nav>
   </div>
-  <button *ngIf="!isRouteExcluded()" (click)="scrollToTop()" class="floating-button">↑</button>
+  <button
+    *ngIf="!isRouteExcluded()"
+    type="button"
+    class="floating-button"
+    [class.visible]="showTop"
+    [attr.aria-label]="currentLanguage === 'es' ? 'Volver arriba' : 'Back to top'"
+    (click)="scrollToTop()">
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+      <path d="M6 15l6-6 6 6"/>
+    </svg>
+  </button>
 </header>
 
 <main id="main">

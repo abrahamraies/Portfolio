@@ -30,6 +30,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.profile h1')?.textContent).toContain('Abraham Raies');
+    expect(compiled.querySelector('.profile .profile-name')?.textContent).toContain('Abraham Raies');
   });
 });
