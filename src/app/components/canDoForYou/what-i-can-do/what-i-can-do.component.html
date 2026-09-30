@@ -6,47 +6,50 @@
     {{ t.servicesTitle || "¿Qué puedo hacer por vos?" }}
   </h2>
   <ul class="services">
-    <li
-      *ngFor="let service of t.services; let index = index"
-      class="animate__animated animate__fadeIn"
-      [ngClass]="'animate__delay-' + (index % 5) + 's'"
-    >
-      <i class="fas fa-check-circle"></i> {{ service }}
-    </li>
+    @for (service of t.services; track service; let index = $index) {
+      <li
+        class="animate__animated animate__fadeIn"
+        [ngClass]="'animate__delay-' + (index % 5) + 's'"
+        >
+        <i class="fas fa-check-circle"></i> {{ service }}
+      </li>
+    }
   </ul>
 
   <h2 class="section-title animate__animated animate__fadeInRight">
     {{ t.results }}
   </h2>
   <div class="projects">
-    <div
-      class="project-card animate__animated animate__zoomIn"
-      *ngFor="let project of t.projects; let index = index"
-      [ngClass]="'animate__delay-' + (index % 3) + 's'"
-    >
-      <img [src]="project.img" [alt]="project.title" />
-      <div class="project-content">
-        <h3>{{ project.title }}</h3>
-        <p>{{ project.desc }}</p>
-        <a [href]="project.link" target="_blank" class="project-btn">
-          <i class="fas fa-external-link-alt"></i>
-          {{ isSpanish ? "Ver Página" : "View Live" }}
-        </a>
+    @for (project of t.projects; track project; let index = $index) {
+      <div
+        class="project-card animate__animated animate__zoomIn"
+        [ngClass]="'animate__delay-' + (index % 3) + 's'"
+        >
+        <img [src]="project.img" [alt]="project.title" />
+        <div class="project-content">
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.desc }}</p>
+          <a [href]="project.link" target="_blank" class="project-btn">
+            <i class="fas fa-external-link-alt"></i>
+            {{ isSpanish ? "Ver Página" : "View Live" }}
+          </a>
+        </div>
       </div>
-    </div>
+    }
   </div>
 
   <h2 class="section-title animate__animated animate__fadeInLeft">
     {{ t.stepsTitle }}
   </h2>
   <ol class="steps">
-    <li
-      *ngFor="let step of t.steps; let i = index"
-      class="animate__animated animate__fadeInUp"
-      [ngClass]="'animate__delay-' + i + 's'"
-    >
-      <strong class="step-number">{{ i + 1 }}</strong> {{ step }}
-    </li>
+    @for (step of t.steps; track step; let i = $index) {
+      <li
+        class="animate__animated animate__fadeInUp"
+        [ngClass]="'animate__delay-' + i + 's'"
+        >
+        <strong class="step-number">{{ i + 1 }}</strong> {{ step }}
+      </li>
+    }
   </ol>
 
   <div class="cta animate__animated animate__pulse animate__infinite">
