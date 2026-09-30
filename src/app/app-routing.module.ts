@@ -8,7 +8,7 @@ import { OtherCertificatesComponent } from './components/certificados/Others/oth
 import { GoogleCertificatesComponent } from './components/certificados/Google/google-certificates/google-certificates.component';
 import { WhatICanDoComponent } from './components/canDoForYou/what-i-can-do/what-i-can-do.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   {path: 'certificados', component: CertificadosComponent},
   {path: 'certificates', component: CertificadosComponent},
   {path: 'certificates/udemy', component: UdemyCertificatesComponent},
@@ -16,7 +16,9 @@ const routes: Routes = [
   {path: 'certificates/google', component: GoogleCertificatesComponent},
   {path: 'about', component: AboutComponent},
   { path: 'what-i-do', component: WhatICanDoComponent },
-  {path: '', pathMatch: 'full', component: AllcomponentsComponent}
+  {path: '', pathMatch: 'full', component: AllcomponentsComponent},
+  // Debe ir al final: cualquier URL desconocida vuelve al inicio en lugar de dejar la pagina en blanco
+  {path: '**', redirectTo: ''}
 ];
 
 @NgModule({
