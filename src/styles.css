@@ -6,6 +6,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Images carry width/height attributes to reserve space while loading; keep their real aspect ratio when CSS sets only the width. */
+img {
+  height: auto;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
@@ -192,8 +197,14 @@ h6 {
 #home {
   width: 100%;
   height: 100vh;
-  background: url("../src/assets/img/fondo.jpg") top center;
+  background: url("../src/assets/img/fondo.webp") top center;
   background-size: cover;
+}
+
+@media (max-width: 900px) {
+  #home {
+    background-image: url("../src/assets/img/fondo-mobile.webp");
+  }
 }
 
 
