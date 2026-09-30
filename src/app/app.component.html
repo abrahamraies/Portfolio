@@ -9,45 +9,54 @@
         <a href="https://www.instagram.com/abrahamraies/" target="_blank" class="social-link instagram" aria-label="Instagram"><i class="bx bxl-instagram"></i></a>
         <a href="https://github.com/abrahamraies" target="_blank" class="social-link github" aria-label="GitHub"><i class="bx bxl-github"></i></a>
         <a href="https://www.linkedin.com/in/abraham-raies/" target="_blank" class="social-link linkedin" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
-        <a *ngIf="currentLanguage === 'es'" href="https://firebasestorage.googleapis.com/v0/b/frontend-portfolio-b48a3.appspot.com/o/CV%20Abraham%20Raies%20-%20Software%20Developer.pdf?alt=media&token=3e0672e6-5ee8-4f34-8db9-d1989950b330" target="_blank" class="social-link CV" aria-label="CV en Español"><i class="bi bi-file-person"></i></a>
-        <a *ngIf="currentLanguage === 'en'" href="https://firebasestorage.googleapis.com/v0/b/frontend-portfolio-b48a3.appspot.com/o/CV%20Abraham%20Raies%20-%20Software%20Developer.pdf?alt=media&token=3e0672e6-5ee8-4f34-8db9-d1989950b330" target="_blank" class="social-link CV" aria-label="CV en Inglés"><i class="bi bi-file-person"></i></a>
+        @if (currentLanguage === 'es') {
+          <a href="https://firebasestorage.googleapis.com/v0/b/frontend-portfolio-b48a3.appspot.com/o/CV%20Abraham%20Raies%20-%20Software%20Developer.pdf?alt=media&token=3e0672e6-5ee8-4f34-8db9-d1989950b330" target="_blank" class="social-link CV" aria-label="CV en Español"><i class="bi bi-file-person"></i></a>
+        }
+        @if (currentLanguage === 'en') {
+          <a href="https://firebasestorage.googleapis.com/v0/b/frontend-portfolio-b48a3.appspot.com/o/CV%20Abraham%20Raies%20-%20Software%20Developer.pdf?alt=media&token=3e0672e6-5ee8-4f34-8db9-d1989950b330" target="_blank" class="social-link CV" aria-label="CV en Inglés"><i class="bi bi-file-person"></i></a>
+        }
       </div>
       <hr>
+      </div>
+
+      <!-- Navegación -->
+      <nav id="navbar" class="nav-menu">
+        @if (currentLanguage === 'es') {
+          <ul>
+            <li><a href="#home" (click)="selected('home')" [ngClass]="{'nav-link scrollto': true, 'active': elem1}"><i class="bx bx-home"></i> <span>Inicio</span></a></li>
+            <li><a href="#about" (click)="selected('about')" [ngClass]="{'nav-link scrollto': true, 'active': elem2}"><i class="bx bx-user"></i> <span>Sobre mi</span></a></li>
+            <li><a href="#skills" (click)="selected('skills')" [ngClass]="{'nav-link scrollto': true, 'active': elem3}"><i class="bx bx-briefcase"></i> <span>Habilidades</span></a></li>
+            <li><a href="#resume" (click)="selected('resume')" [ngClass]="{'nav-link scrollto': true, 'active': elem4}"><i class="bx bx-file-blank"></i> <span>Resumen</span></a></li>
+            <li><a href="#proyect" (click)="selected('proyect')" [ngClass]="{'nav-link scrollto': true, 'active': elem5}"><i class="bx bx-book-content"></i> <span>Proyectos</span></a></li>
+            <li><a href="#contact" (click)="selected('contact')" [ngClass]="{'nav-link scrollto': true, 'active': elem6}"><i class="bx bx-envelope"></i> <span>Contacto</span></a></li>
+          </ul>
+        }
+        @if (currentLanguage === 'en') {
+          <ul>
+            <li><a href="#home" (click)="selected('home')" [ngClass]="{'nav-link scrollto': true, 'active': elem1}"><i class="bx bx-home"></i> <span>Home</span></a></li>
+            <li><a href="#about" (click)="selected('about')" [ngClass]="{'nav-link scrollto': true, 'active': elem2}"><i class="bx bx-user"></i> <span>About me</span></a></li>
+            <li><a href="#skills" (click)="selected('skills')" [ngClass]="{'nav-link scrollto': true, 'active': elem3}"><i class="bx bx-briefcase"></i> <span>Skills</span></a></li>
+            <li><a href="#resume" (click)="selected('resume')" [ngClass]="{'nav-link scrollto': true, 'active': elem4}"><i class="bx bx-file-blank"></i> <span>Summary</span></a></li>
+            <li><a href="#proyect" (click)="selected('proyect')" [ngClass]="{'nav-link scrollto': true, 'active': elem5}"><i class="bx bx-book-content"></i> <span>Projects</span></a></li>
+            <li><a href="#contact" (click)="selected('contact')" [ngClass]="{'nav-link scrollto': true, 'active': elem6}"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+          </ul>
+        }
+      </nav>
     </div>
+    @if (!isRouteExcluded()) {
+      <button
+        type="button"
+        class="floating-button"
+        [class.visible]="showTop"
+        [attr.aria-label]="currentLanguage === 'es' ? 'Volver arriba' : 'Back to top'"
+        (click)="scrollToTop()">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+          <path d="M6 15l6-6 6 6"/>
+        </svg>
+      </button>
+    }
+  </header>
 
-    <!-- Navegación -->
-    <nav id="navbar" class="nav-menu">
-      <ul *ngIf="currentLanguage === 'es'">
-        <li><a href="#home" (click)="selected('home')" [ngClass]="{'nav-link scrollto': true, 'active': elem1}"><i class="bx bx-home"></i> <span>Inicio</span></a></li>
-        <li><a href="#about" (click)="selected('about')" [ngClass]="{'nav-link scrollto': true, 'active': elem2}"><i class="bx bx-user"></i> <span>Sobre mi</span></a></li>
-        <li><a href="#skills" (click)="selected('skills')" [ngClass]="{'nav-link scrollto': true, 'active': elem3}"><i class="bx bx-briefcase"></i> <span>Habilidades</span></a></li>
-        <li><a href="#resume" (click)="selected('resume')" [ngClass]="{'nav-link scrollto': true, 'active': elem4}"><i class="bx bx-file-blank"></i> <span>Resumen</span></a></li>
-        <li><a href="#proyect" (click)="selected('proyect')" [ngClass]="{'nav-link scrollto': true, 'active': elem5}"><i class="bx bx-book-content"></i> <span>Proyectos</span></a></li>
-        <li><a href="#contact" (click)="selected('contact')" [ngClass]="{'nav-link scrollto': true, 'active': elem6}"><i class="bx bx-envelope"></i> <span>Contacto</span></a></li>
-      </ul>
-      <ul *ngIf="currentLanguage === 'en'">
-        <li><a href="#home" (click)="selected('home')" [ngClass]="{'nav-link scrollto': true, 'active': elem1}"><i class="bx bx-home"></i> <span>Home</span></a></li>
-        <li><a href="#about" (click)="selected('about')" [ngClass]="{'nav-link scrollto': true, 'active': elem2}"><i class="bx bx-user"></i> <span>About me</span></a></li>
-        <li><a href="#skills" (click)="selected('skills')" [ngClass]="{'nav-link scrollto': true, 'active': elem3}"><i class="bx bx-briefcase"></i> <span>Skills</span></a></li>
-        <li><a href="#resume" (click)="selected('resume')" [ngClass]="{'nav-link scrollto': true, 'active': elem4}"><i class="bx bx-file-blank"></i> <span>Summary</span></a></li>
-        <li><a href="#proyect" (click)="selected('proyect')" [ngClass]="{'nav-link scrollto': true, 'active': elem5}"><i class="bx bx-book-content"></i> <span>Projects</span></a></li>
-        <li><a href="#contact" (click)="selected('contact')" [ngClass]="{'nav-link scrollto': true, 'active': elem6}"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-      </ul>
-    </nav>
-  </div>
-  <button
-    *ngIf="!isRouteExcluded()"
-    type="button"
-    class="floating-button"
-    [class.visible]="showTop"
-    [attr.aria-label]="currentLanguage === 'es' ? 'Volver arriba' : 'Back to top'"
-    (click)="scrollToTop()">
-    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-      <path d="M6 15l6-6 6 6"/>
-    </svg>
-  </button>
-</header>
-
-<main id="main">
-  <router-outlet></router-outlet>
-</main>
+  <main id="main">
+    <router-outlet></router-outlet>
+  </main>

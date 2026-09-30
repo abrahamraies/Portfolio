@@ -12,9 +12,10 @@ interface Project {
 }
 
 @Component({
-  selector: 'app-proyect',
-  templateUrl: './proyect.component.html',
-  styleUrls: ['./proyect.component.css']
+    selector: 'app-proyect',
+    templateUrl: './proyect.component.html',
+    styleUrls: ['./proyect.component.css'],
+    standalone: false
 })
 export class ProyectComponent implements OnInit {
   currentLanguage!: string;

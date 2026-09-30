@@ -1,8 +1,12 @@
 <section id="contact" class="contact">
   <div class="container">
     <div class="section-title">
-      <h2 *ngIf="currentLanguage === 'es'">Contacto</h2>
-      <h2 *ngIf="currentLanguage === 'en'">Contact</h2>
+      @if (currentLanguage === 'es') {
+        <h2>Contacto</h2>
+      }
+      @if (currentLanguage === 'en') {
+        <h2>Contact</h2>
+      }
     </div>
 
     <div class="contact-wrapper">
@@ -27,144 +31,147 @@
             <p>
               <a href="mailto:abrahamraies@gmail.com"
                 >abrahamraies&#64;gmail.com</a
-              >
-            </p>
+                >
+              </p>
+            </div>
           </div>
-        </div>
 
-        <div class="info-block" data-aos="fade-right">
-          <div class="icon">
-            <i class="bi bi-phone"></i>
-          </div>
-          <div class="info-text">
-            <h4>{{ currentLanguage === "es" ? "Teléfono" : "Phone" }}</h4>
-            <div class="phone-row">
-              <p><a href="tel:+543462539842">+54 3462 53-9842</a></p>
-              <a
-                class="whatsapp"
-                [attr.aria-label]="currentLanguage === 'es' ? 'Escribir por WhatsApp' : 'Message on WhatsApp'"
+          <div class="info-block" data-aos="fade-right">
+            <div class="icon">
+              <i class="bi bi-phone"></i>
+            </div>
+            <div class="info-text">
+              <h4>{{ currentLanguage === "es" ? "Teléfono" : "Phone" }}</h4>
+              <div class="phone-row">
+                <p><a href="tel:+543462539842">+54 3462 53-9842</a></p>
+                <a
+                  class="whatsapp"
+                  [attr.aria-label]="currentLanguage === 'es' ? 'Escribir por WhatsApp' : 'Message on WhatsApp'"
                 href="https://wa.me/5493462539842/?text={{
                   currentLanguage === 'es'
                     ? 'Hola Abraham, vi tu portfolio y me gustaria hablar con vos'
                     : 'Hi Abraham, I saw your portfolio and I would like to talk'
                 }}"
-                target="_blank"
-                rel="noopener"
-              >
-                <img
-                  src="assets/img/WhatsApp logo.png"
-                  alt="WhatsApp"
-                  width="32"
-                  height="32"
-                />
-              </a>
+                  target="_blank"
+                  rel="noopener"
+                  >
+                  <img
+                    src="assets/img/WhatsApp logo.png"
+                    alt="WhatsApp"
+                    width="32"
+                    height="32"
+                    />
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- 📝 Formulario -->
-      <div class="contact-form" data-aos="fade-left">
-        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-          <div class="form-group">
-            <label>{{ currentLanguage === "es" ? "Nombre" : "Name" }}</label>
-            <input
-              type="text"
-              class="form-control"
-              formControlName="name"
+        <!-- 📝 Formulario -->
+        <div class="contact-form" data-aos="fade-left">
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label>{{ currentLanguage === "es" ? "Nombre" : "Name" }}</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="name"
               [placeholder]="
                 currentLanguage === 'es' ? 'Tu nombre' : 'Your name'
               "
-            />
-            <small
-              *ngIf="
+                />
+              @if (
                 contactForm.get('name')?.invalid &&
                 contactForm.get('name')?.touched
-              "
-            >
-              {{
-                currentLanguage === "es" ? "Nombre inválido." : "Invalid name."
-              }}
-            </small>
-            <input
-              type="text"
-              formControlName="honeypot"
-              style="display: none"
-            />
-          </div>
+                ) {
+                <small
+                  >
+                  {{
+                  currentLanguage === "es" ? "Nombre inválido." : "Invalid name."
+                  }}
+                </small>
+              }
+              <input
+                type="text"
+                formControlName="honeypot"
+                style="display: none"
+                />
+            </div>
 
-          <div class="form-group">
-            <label>Email</label>
-            <input
-              type="email"
-              class="form-control"
-              formControlName="email"
-              placeholder="your@email.com"
-            />
-            <small
-              *ngIf="
+            <div class="form-group">
+              <label>Email</label>
+              <input
+                type="email"
+                class="form-control"
+                formControlName="email"
+                placeholder="your@email.com"
+                />
+              @if (
                 contactForm.get('email')?.invalid &&
                 contactForm.get('email')?.touched
-              "
-            >
-              {{
-                currentLanguage === "es" ? "Email inválido." : "Invalid email."
-              }}
-            </small>
-          </div>
+                ) {
+                <small
+                  >
+                  {{
+                  currentLanguage === "es" ? "Email inválido." : "Invalid email."
+                  }}
+                </small>
+              }
+            </div>
 
-          <div class="form-group">
-            <label>{{ currentLanguage === "es" ? "Asunto" : "Reason" }}</label>
-            <input
-              type="text"
-              class="form-control"
-              formControlName="reason"
+            <div class="form-group">
+              <label>{{ currentLanguage === "es" ? "Asunto" : "Reason" }}</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="reason"
               [placeholder]="
                 currentLanguage === 'es'
                   ? 'Motivo del mensaje'
                   : 'Reason for contacting'
               "
-            />
-          </div>
+                />
+            </div>
 
-          <div class="form-group">
-            <label>{{
-              currentLanguage === "es" ? "Mensaje" : "Message"
-            }}</label>
-            <textarea
-              rows="5"
-              class="form-control"
-              formControlName="message"
+            <div class="form-group">
+              <label>{{
+                currentLanguage === "es" ? "Mensaje" : "Message"
+              }}</label>
+              <textarea
+                rows="5"
+                class="form-control"
+                formControlName="message"
               [placeholder]="
                 currentLanguage === 'es'
                   ? 'Escribe tu mensaje aquí...'
                   : 'Write your message here...'
               "
-            ></textarea>
-            <small
-              *ngIf="
+              ></textarea>
+              @if (
                 contactForm.get('message')?.touched &&
                 contactForm.get('message')?.errors?.['minlength']
-              "
-              class="text-danger"
-            >
-              {{
-                currentLanguage === "es"
+                ) {
+                <small
+                  class="text-danger"
+                  >
+                  {{
+                  currentLanguage === "es"
                   ? "El mensaje debe tener al menos 20 caracteres."
                   : "The message must be at least 20 characters."
-              }}
-            </small>
-          </div>
+                  }}
+                </small>
+              }
+            </div>
 
-          <button
-            type="submit"
-            class="btn-submit"
-            [disabled]="contactForm.invalid"
-          >
-            {{ currentLanguage === "es" ? "Enviar" : "Send" }}
-          </button>
-        </form>
+            <button
+              type="submit"
+              class="btn-submit"
+              [disabled]="contactForm.invalid"
+              >
+              {{ currentLanguage === "es" ? "Enviar" : "Send" }}
+            </button>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>

@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-udemy-certificates',
-  standalone: true,
-  imports: [],
-  templateUrl: './udemy-certificates.component.html',
-  styleUrl: './udemy-certificates.component.css'
+    selector: 'app-udemy-certificates',
+    imports: [],
+    templateUrl: './udemy-certificates.component.html',
+    styleUrl: './udemy-certificates.component.css'
 })
 export class UdemyCertificatesComponent {
   isSpanish = localStorage.getItem('lang') === 'es';
