@@ -7,7 +7,8 @@
     "build": "ng build",
     "deploy": "node scripts/deploy-docs.mjs",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "images": "node scripts/optimize-images.mjs"
   },
   "private": true,
   "engines": {
@@ -43,6 +44,7 @@
     "karma-coverage": "~2.2.1",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.2.0",
+    "sharp": "^0.35.5",
     "typescript": "~5.9.3"
   }
 }

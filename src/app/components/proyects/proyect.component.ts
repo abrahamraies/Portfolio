@@ -60,7 +60,7 @@ export class ProyectComponent implements OnInit {
     {
       titleEs: 'App de manejo de stock en tiempo real (.NET + Angular + MySql)',
       titleEn: 'Real-Time Stock Management App (.NET + Angular + MySql)',
-      image: 'assets/img/proyects/Principal.png',
+      image: 'assets/img/proyects/Principal.webp',
       altText: 'StockManager',
       filterClass: 'filter-app',
       demoLink: 'https://marvelapp.com/prototype/1b6aca74/screen/95445734',
@@ -69,7 +69,7 @@ export class ProyectComponent implements OnInit {
     {
       titleEs: 'Alquiler de vehiculos (SpringBoot + Angular + MySql)',
       titleEn: 'Rental Cars <br>(SpringBoot + Angular + MySql)',
-      image: 'assets/img/proyects/rentalsVenado.png',
+      image: 'assets/img/proyects/rentalsVenado.webp',
       altText: 'Car rental web site',
       filterClass: 'filter-app',
       demoLink: 'https://rentals-venado.web.app/',
@@ -78,7 +78,7 @@ export class ProyectComponent implements OnInit {
     {
       titleEs: 'Web de Noticias con Angular',
       titleEn: 'News Web (Angular)',
-      image: 'assets/img/proyects/Imagen para portfolio.png',
+      image: 'assets/img/proyects/Imagen para portfolio.webp',
       altText: 'News Web with Angular',
       filterClass: 'filter-web',
       demoLink: 'https://drive.google.com/drive/folders/1Mqw7XWESNQhPS2zuWGrOewiWdKxyUUXn?usp=sharing',
@@ -87,7 +87,7 @@ export class ProyectComponent implements OnInit {
     {
       titleEs: 'Lista de tareas (.NET + Angular + MySql)',
       titleEn: 'Task List (.NET + Angular + MySql)',
-      image: 'assets/img/proyects/TasksLists.png',
+      image: 'assets/img/proyects/TasksLists.webp',
       altText: 'Task List',
       filterClass: 'filter-web',
       demoLink: 'https://marvelapp.com/prototype/fd51hi6/screen/95440488',
@@ -96,7 +96,7 @@ export class ProyectComponent implements OnInit {
     {
       titleEs: 'Maquina de casino para aprender (Angular)',
       titleEn: 'Slot Machine for learning (Angular)',
-      image: 'assets/img/proyects/FirstCapture.png',
+      image: 'assets/img/proyects/FirstCapture.webp',
       altText: 'SlotMachine',
       filterClass: 'filter-web',
       demoLink: 'https://marvelapp.com/prototype/7gcci77/screen/95442823',
@@ -105,7 +105,7 @@ export class ProyectComponent implements OnInit {
     {
       titleEs: 'Como crear un proyecto paso a paso (Angular)',
       titleEn: 'Stepper of proyects creation (Angular)',
-      image: 'assets/img/proyects/1er picture.png',
+      image: 'assets/img/proyects/1er picture.webp',
       altText: 'Stepper',
       filterClass: 'filter-web',
       demoLink: 'https://abrahamraies.github.io/Stepper/',
@@ -114,7 +114,7 @@ export class ProyectComponent implements OnInit {
     {
       titleEs: 'App de Noticias (IONIC)',
       titleEn: 'News App (IONIC)',
-      image: 'assets/img/proyects/NoticiasPrincipal.png',
+      image: 'assets/img/proyects/NoticiasPrincipal.webp',
       altText: 'News App with IONIC',
       filterClass: 'filter-app',
       demoLink: 'https://marvelapp.com/prototype/2i6hebeg',
@@ -123,7 +123,7 @@ export class ProyectComponent implements OnInit {
     {
       titleEs: 'App de Peliculas (IONIC)',
       titleEn: 'Movie App (IONIC)',
-      image: 'assets/img/proyects/PeliculasPrincipal.png',
+      image: 'assets/img/proyects/PeliculasPrincipal.webp',
       altText: 'Movie App with IONIC',
       filterClass: 'filter-app',
       demoLink: 'https://marvelapp.com/prototype/j8j4i3e',
@@ -132,7 +132,7 @@ export class ProyectComponent implements OnInit {
     {
       titleEs: 'App de Recetas (.NET 9 + React 19 + Tailwind v4)',
       titleEn: 'Recipes App<br>(.NET 9 + React 19 + Tailwind v4)',
-      image: 'assets/img/proyects/recipeApp.png',
+      image: 'assets/img/proyects/recipeApp.webp',
       altText: 'Recipes App',
       filterClass: 'filter-app',
       demoLink: 'https://recipes-app01.netlify.app/',
@@ -141,7 +141,7 @@ export class ProyectComponent implements OnInit {
     {
       titleEs: 'Guía de Actividades Físicas (.NET 8 + React 18)',
       titleEn: 'Fitness Activity Guide<br>(.NET 8 + React 18)',
-      image: 'assets/img/proyects/gymFitnessGuide.png',
+      image: 'assets/img/proyects/gymFitnessGuide.webp',
       altText: 'Fitness Guide App',
       filterClass: 'filter-app',
       demoLink: 'https://gymfitnessguide.alwaysdata.net/app',

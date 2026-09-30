@@ -7,6 +7,7 @@ Personal portfolio built with Angular 21 (NgModule-based), Bootstrap 5, jQuery/P
 - `npm start` — dev server at http://localhost:4200/Portfolio/ (must be served under `/Portfolio/` to match `<base href>`)
 - `npm run build` — production build to `dist/front-end`
 - `npm run deploy` — builds and replaces the contents of `docs/` (GitHub Pages) with the fresh output (plus a `404.html` copy of `index.html` so deep links work); then review with `git status` and commit/push to `main`. Run `node scripts/deploy-docs.mjs --out <dir>` to try it against another folder.
+- `npm run images` — converts every .jpg/.png under `src/assets/img` to WebP at the size the site needs and deletes the original (keeps `og.jpg` as JPEG). After running it, change the image references in the code from `.png`/`.jpg` to `.webp`. Add width/height and `loading="lazy"` to new below-the-fold images.
 - `npm test` — Karma/Jasmine (watch mode, opens Chrome). For CI/headless: `npx ng test --watch=false --browsers=ChromeHeadlessNoSandbox`
   In cloud sessions set `CHROME_BIN=/opt/pw-browsers/chromium-1194/chrome-linux/chrome` first.
 - Typecheck only: `npx tsc --noEmit -p tsconfig.app.json`
