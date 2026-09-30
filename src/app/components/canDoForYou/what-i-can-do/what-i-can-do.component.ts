@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-what-i-can-do',
-  templateUrl: './what-i-can-do.component.html',
-  styleUrls: ['./what-i-can-do.component.css']
+    selector: 'app-what-i-can-do',
+    templateUrl: './what-i-can-do.component.html',
+    styleUrls: ['./what-i-can-do.component.css'],
+    standalone: false
 })
 export class WhatICanDoComponent {
   constructor(private router: Router) { }

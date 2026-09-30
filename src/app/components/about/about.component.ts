@@ -4,9 +4,10 @@ import { aboutMeTexts } from 'src/app/json-texts/about-me';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+    selector: 'app-about',
+    templateUrl: './about.component.html',
+    styleUrls: ['./about.component.css'],
+    standalone: false
 })
 export class AboutComponent implements OnInit {
   currentLanguage!: 'es' | 'en';
