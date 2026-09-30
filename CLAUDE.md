@@ -1,6 +1,6 @@
 # Portfolio
 
-Personal portfolio built with Angular 18 (NgModule-based), Bootstrap 5, jQuery/Popper, and EmailJS for the contact form.
+Personal portfolio built with Angular 21 (NgModule-based), Bootstrap 5, jQuery/Popper, and EmailJS for the contact form.
 
 ## Commands
 - Requires Node `^20.19`, `^22.12` or `>=24` (Angular 21). Dependencies must stay at 0 vulnerabilities: run `npm audit` after any dependency change.
