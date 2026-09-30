@@ -5,6 +5,17 @@
     "experienceTitle": "Experiencia profesional",
     "experience": [
       {
+        "position": "Investigación y Desarrollo en IA",
+        "date": "2026 - Actualidad",
+        "company": "Cooperacion Seguros",
+        "tasks": [
+          "Investigación y desarrollo de <strong>agentes de IA</strong> y servidores <strong>MCP</strong> aplicados a procesos internos de la compañía.",
+          "Diseño de un agente de <strong>base de conocimiento</strong> para consultar en lenguaje natural el código y la documentación de los repositorios, en lugar de buscar repo por repo.",
+          "Desarrollo de un agente de <strong>code review</strong> para reducir el cuello de botella en la revisión de pull requests.",
+          "Curaduría de skills y flujos con la <strong>API de Claude</strong>, <strong>n8n</strong> y <strong>Playwright</strong> para automatizar tareas de desarrollo."
+        ]
+      },
+      {
         "position": "Desarrollador .NET Web",
         "date": "2024 - Actualidad",
         "company": "Koben",
@@ -91,6 +102,17 @@
     "description": "I am a Programming Technician with a background in Information Systems Engineering. In 2018 I started studying at the National Technological University of Rosario and later specialized in technologies like .NET, Angular, Docker, and SQL. I graduated with distinction in November 2022.\n\nThroughout my career, I have gained experience in both personal and professional projects, excelling in leadership and teamwork. Currently, I continue to expand my knowledge through specialized courses, with a particular focus on software development and improving my English proficiency, which is essential for my growth in the global technology industry.",
     "experienceTitle": "Professional Experience",
     "experience": [
+      {
+        "position": "AI Research & Development",
+        "date": "2026 - Present",
+        "company": "Cooperacion Seguros",
+        "tasks": [
+          "Research and development of <strong>AI agents</strong> and <strong>MCP</strong> servers applied to the company's internal processes.",
+          "Designing a <strong>knowledge-base</strong> agent that answers natural-language questions about the code and documentation of the company repositories, instead of searching repo by repo.",
+          "Building a <strong>code review</strong> agent to remove the bottleneck in pull request reviews.",
+          "Curating skills and workflows with the <strong>Claude API</strong>, <strong>n8n</strong> and <strong>Playwright</strong> to automate development tasks."
+        ]
+      },
       {
         "position": ".NET Web Developer",
         "date": "2024 - Present",
