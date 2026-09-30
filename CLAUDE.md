@@ -3,6 +3,7 @@
 Personal portfolio built with Angular 18 (NgModule-based), Bootstrap 5, jQuery/Popper, and EmailJS for the contact form.
 
 ## Commands
+- Requires Node `^20.19`, `^22.12` or `>=24` (Angular 21). Dependencies must stay at 0 vulnerabilities: run `npm audit` after any dependency change.
 - `npm start` — dev server at http://localhost:4200/Portfolio/ (must be served under `/Portfolio/` to match `<base href>`)
 - `npm run build` — production build to `dist/front-end`
 - `npm run deploy` — builds and replaces the contents of `docs/` (GitHub Pages) with the fresh output (plus a `404.html` copy of `index.html` so deep links work); then review with `git status` and commit/push to `main`. Run `node scripts/deploy-docs.mjs --out <dir>` to try it against another folder.
