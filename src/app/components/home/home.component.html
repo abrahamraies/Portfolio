@@ -1,17 +1,27 @@
 <section id="home" class="d-flex flex-column justify-content-center align-items-center">
   <div class="home-container" data-aos="fade-in" style="display: inline-block;">
     <h1 class="name-title">Abraham Raies</h1>
-    <ngx-typed-js
-      [strings]="typedStrings"
-      [backDelay]="1800"
-      [loop]="true"
-      [backSpeed]="50"
-      [typeSpeed]="50"
-      [showCursor]="false">
+    <div class="hero-role">{{ roleLabel }}</div>
 
-      <span class="subtitle-typing">{{ introLabel }}</span>
-      <span class="typing subtitle-typing"></span>
+    <div class="hero-typed">
+      <ngx-typed-js
+        [strings]="typedStrings"
+        [backDelay]="1800"
+        [loop]="true"
+        [backSpeed]="50"
+        [typeSpeed]="50"
+        [showCursor]="false">
 
-    </ngx-typed-js>
+        <span class="subtitle-typing">{{ introLabel }}</span>
+        <span class="typing subtitle-typing"></span>
+
+      </ngx-typed-js>
+    </div>
+
+    <div class="hero-actions">
+      <a class="hero-btn hero-btn-primary scrollto" href="#contact">{{ contactLabel }}</a>
+      <a class="hero-btn hero-btn-secondary" [href]="cvUrl" target="_blank" rel="noopener">{{ cvLabel }}</a>
+      <a class="hero-link scrollto" href="#proyect">{{ projectsLabel }}</a>
+    </div>
   </div>
 </section>
